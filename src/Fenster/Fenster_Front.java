@@ -5,7 +5,7 @@ import javax.swing.*;
 
 public class Fenster_Front {
 	
-	public static void main(String[] args) {
+	public Fenster_Front() {
 		
 	JFrame windowcontroller = new JFrame();
 	
@@ -23,6 +23,5 @@ public class Fenster_Front {
 	windowcontroller.setVisible(true);
 	
 	
-	}
-	
+	}	
 }

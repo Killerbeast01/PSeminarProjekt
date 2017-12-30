@@ -5,7 +5,7 @@ import javax.swing.*;
 
 public class Fenster_Back {
 
-	public static void main(String[] args) {
+	public Fenster_Back()  {
 		
 	JFrame windowcontroller = new JFrame();
 	

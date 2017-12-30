@@ -5,7 +5,7 @@ import javax.swing.*;
 
 public class Fenster_Right {
 
-	public static void main(String[] args) {
+	public Fenster_Right() {
 		
 	JFrame windowcontroller = new JFrame();
 	
