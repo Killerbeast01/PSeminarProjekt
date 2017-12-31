@@ -10,11 +10,11 @@ public class Controller {
 		windowcontroller.setTitle("Controller");
 		JPanel controllerpanel = new JPanel();
 		
-		JButton rotate_left_button = new JButton("Rotate_Left");
+		JButton rotate_left_button = new JButton("Rotate_Left"); //RotationsVariable verringern
 		
 		controllerpanel.add(rotate_left_button);
 		
-		JButton rotate_right_button = new JButton("Rotate_Right");
+		JButton rotate_right_button = new JButton("Rotate_Right"); //RotationsVariable erhöhen
 		
 		controllerpanel.add(rotate_right_button);
 		
