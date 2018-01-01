@@ -3,9 +3,15 @@ package Fenster;
 import javax.swing.*;
 
 
-public class Fenster_Front {
+public class Fenster_Front extends Main.Controller {
+	
+	private int winkel;
 	
 	public Fenster_Front() {
+		
+	winkel = rotation + 0;
+	
+	System.out.print(winkel);
 		
 	JFrame windowcontroller = new JFrame();
 	

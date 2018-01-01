@@ -3,7 +3,7 @@ package Fenster;
 import javax.swing.*;
 
 
-public class Fenster_Back {
+public class Fenster_Back extends Main.Controller {
 
 	public Fenster_Back()  {
 		
