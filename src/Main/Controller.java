@@ -20,8 +20,7 @@ protected int rotation = 0;
 		
 		JButton rotate_right_button = new JButton("Rotate_Right"); //RotationsVariable erhöhen 
 		controllerpanel.add(rotate_right_button);
-		rotate_right_button.setActionCommand("rotation + 5");
-		
+		rotate_right_button.setActionCommand("rotation_higher()");	
 		
 		JButton switch_oldSchool = new JButton("Altes Schulgebäude"); //Altes Schulgebäude anzeigen
 		controllerpanel.add(switch_oldSchool);
@@ -51,9 +50,13 @@ protected int rotation = 0;
 		
 		public void get_Rotation() {
 			
-			println(rotation);
+			System.out.print(rotation);
 			
 			
+		}
+		
+		public void rotation_higher() {
+			rotation = rotation + 1;
 		}
 		
 		
