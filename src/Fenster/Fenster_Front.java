@@ -1,33 +1,57 @@
 package Fenster;
 
+import java.awt.event.*;
 import javax.swing.*;
 
 
-public class Fenster_Front extends Main.Controller {
+public class Fenster_Front /*extends Main.Controller */ {
 	
-	private int winkel;
+	
+	private static int winkel;
 	
 	public Fenster_Front() {
 		
-	winkel = rotation + 0;
-	
-	System.out.print(winkel);
+		System.out.println("Frontfenster: läd");
+		winkel = Main.Controller.rotation + 0;
 		
-	JFrame windowcontroller = new JFrame();
+		//System.out.print(winkel);
+			
+		JFrame window_front = new JFrame();
+		
+		window_front.setTitle("Front");
+		JPanel window_front_panel = new JPanel();
+		
+		JButton ok_button = new JButton("FrontPerspective");
+		ButtonListener_get_winkel get_winkel = new ButtonListener_get_winkel();
+		ok_button.addActionListener(get_winkel);
+		
+		window_front_panel.add(ok_button);
+		
+		window_front.add(window_front_panel);
+		
+		window_front.pack();
+		
+		window_front.setVisible(true);
+		
+		System.out.println("Frontfenster: geladen");
+		System.out.println("Objekt: läd");
+		Fenster_Front.build_Object();
+			
+	}
 	
-	windowcontroller.setTitle("Front");
-	JPanel controllerpanel = new JPanel();
+	public static void build_Object() {
+		//Import von Objekt
+		//Objektausrichtung mit
+		System.out.print("Winkel des Objektes beträgt: ");
+		System.out.println(winkel);
+		//festlegen
+		System.out.println("Objekt: geladen");
+	}
 	
-	JButton ok_button = new JButton("FrontPerspective");
-	
-	controllerpanel.add(ok_button);
-	
-	windowcontroller.add(controllerpanel);
-	
-	windowcontroller.pack();
-	
-	windowcontroller.setVisible(true);
-	
-	
-	}	
+	class ButtonListener_get_winkel implements ActionListener {
+		public void actionPerformed(ActionEvent e) {
+			winkel = Main.Controller.rotation + 0;
+			System.out.println(winkel);
+		}
+	}
 }

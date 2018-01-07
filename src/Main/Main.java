@@ -1,24 +1,29 @@
 package Main;
 	public class Main {
 		private static String Version = "0.1";
-		
-		
-
+	
 		public static void main(String[] args) {
 			
-			Main.getVersion();
+		//	Main.getVersion();
 			
 			new Controller();
+			
+			windows();
+
+		}
+		
+		public static void windows() {
 			
 			new Fenster.Fenster_Front();
 			new Fenster.Fenster_Right();
 			new Fenster.Fenster_Back();
 			new Fenster.Fenster_Left();
-			
-
+		
 		}
 		
+		
 		public static void getVersion() {
+			
 			System.out.println(Version);
 		}
 
