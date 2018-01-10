@@ -20,11 +20,10 @@ public class Fenster_Right {
 		window_right.setTitle("Right");
 		JPanel window_right_panel = new JPanel();
 		
-		JButton ok_button = new JButton("RightPerspective");
-		ButtonListener_get_winkel get_winkel = new ButtonListener_get_winkel();
-		ok_button.addActionListener(get_winkel);
+		JLabel rotation_label = new JLabel();
+		rotation_label.setText(String.valueOf(winkel));
 		
-		window_right_panel.add(ok_button);
+		window_right_panel.add(rotation_label);
 		
 		window_right.add(window_right_panel);
 		
@@ -35,7 +34,15 @@ public class Fenster_Right {
 		System.out.println("Rightfenster: geladen");
 		System.out.println("Objekt: läd");
 		Fenster_Right.build_Object();
+		while (Fenster.Fenster_Left.go == 1) {
+			rotation_label.setText(String.valueOf(winkel));;
+		}
+
 		
+	}
+	
+	public static void update() {
+		winkel = Main.Controller.rotation + 90;
 	}
 	
 	public static void build_Object() {

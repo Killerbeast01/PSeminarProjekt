@@ -1,6 +1,5 @@
 package Fenster;
 
-import java.awt.event.*;
 import javax.swing.*;
 
 
@@ -21,11 +20,11 @@ public class Fenster_Front /*extends Main.Controller */ {
 		window_front.setTitle("Front");
 		JPanel window_front_panel = new JPanel();
 		
-		JButton ok_button = new JButton("FrontPerspective");
-		ButtonListener_get_winkel get_winkel = new ButtonListener_get_winkel();
-		ok_button.addActionListener(get_winkel);
+		JLabel rotation_label = new JLabel();
 		
-		window_front_panel.add(ok_button);
+		rotation_label.setText(String.valueOf(winkel));
+		
+		window_front_panel.add(rotation_label);
 		
 		window_front.add(window_front_panel);
 		
@@ -36,7 +35,15 @@ public class Fenster_Front /*extends Main.Controller */ {
 		System.out.println("Frontfenster: geladen");
 		System.out.println("Objekt: läd");
 		Fenster_Front.build_Object();
+		while (Fenster.Fenster_Left.go == 1) {
+			rotation_label.setText(String.valueOf(winkel));
+		}
+
 			
+	}
+	
+	public static void update() {
+		winkel = Main.Controller.rotation + 0;
 	}
 	
 	public static void build_Object() {
@@ -48,10 +55,4 @@ public class Fenster_Front /*extends Main.Controller */ {
 		System.out.println("Objekt: geladen");
 	}
 	
-	class ButtonListener_get_winkel implements ActionListener {
-		public void actionPerformed(ActionEvent e) {
-			winkel = Main.Controller.rotation + 0;
-			System.out.println(winkel);
-		}
-	}
 }

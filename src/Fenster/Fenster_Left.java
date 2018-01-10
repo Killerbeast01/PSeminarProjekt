@@ -6,6 +6,8 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 public class Fenster_Left {
+	
+	protected static int go;
 
 	private static int winkel;
 	
@@ -20,11 +22,10 @@ public class Fenster_Left {
 		window_left.setTitle("Left");
 		JPanel window_left_panel = new JPanel();
 		
-		JButton ok_button = new JButton("LeftPerspective");
-		ButtonListener_get_winkel get_winkel = new ButtonListener_get_winkel();
-		ok_button.addActionListener(get_winkel);
+		JLabel rotation_label = new JLabel();
+		rotation_label.setText(String.valueOf(winkel));
 		
-		window_left_panel.add(ok_button);
+		window_left_panel.add(rotation_label);
 		
 		window_left.add(window_left_panel);
 		
@@ -34,7 +35,17 @@ public class Fenster_Left {
 		System.out.println("Leftfenster: geladen");
 		System.out.println("Objekt: läd");
 		Fenster_Left.build_Object();
+		go = 1;
+		while (Fenster.Fenster_Left.go == 1) {
+			update();
+			rotation_label.setText(String.valueOf(winkel));;
+		}
+
 		
+	}
+	
+	public static void update() {
+		winkel = Main.Controller.rotation + 270;
 	}
 	
 	public static void build_Object() {

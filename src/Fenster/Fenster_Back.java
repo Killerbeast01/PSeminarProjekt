@@ -1,8 +1,8 @@
 package Fenster;
 
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+//import java.awt.event.ActionEvent;
+//import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
@@ -21,11 +21,9 @@ public class Fenster_Back {
 		window_back.setTitle("Back");
 		JPanel window_back_panel = new JPanel();
 		
-		JButton ok_button = new JButton("BackPerspective");
-		ButtonListener_get_winkel get_winkel = new ButtonListener_get_winkel();
-		ok_button.addActionListener(get_winkel);
-		
-		window_back_panel.add(ok_button);
+		JLabel rotation_label = new JLabel();
+		rotation_label.setText(String.valueOf(winkel));
+		window_back_panel.add(rotation_label);
 		
 		window_back.add(window_back_panel);
 		
@@ -36,7 +34,17 @@ public class Fenster_Back {
 		System.out.println("Backfenster: geladen");
 		System.out.println("Objekt: läd");
 		Fenster_Back.build_Object();
-		
+		SwingUtilities.updateComponentTreeUI(window_back);
+		while (Fenster.Fenster_Left.go == 1) {
+			rotation_label.setText(String.valueOf(winkel));;
+			
+		}
+	}
+	
+	
+	public static void update() {
+		winkel = Main.Controller.rotation + 180;
+	
 	}
 	
 	public static void build_Object() {
@@ -48,12 +56,6 @@ public class Fenster_Back {
 		System.out.println("Objekt: geladen");
 	}
 	
-	class ButtonListener_get_winkel implements ActionListener {
-		public void actionPerformed(ActionEvent e) {
-			winkel = Main.Controller.rotation + 180;
-			System.out.println(winkel);
-		}
-	}
 	
 }
 	

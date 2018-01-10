@@ -64,24 +64,46 @@ public static int rotation = 0;
 		
 		public void rotation_higher() {
 			rotation = rotation + 1;
+			Fenster.Fenster_Back.update();
+			Fenster.Fenster_Front.update();
+			Fenster.Fenster_Left.update();
+			Fenster.Fenster_Right.update();
+			System.out.println("Higher");
 		}
+		
 		
 		
 		class ButtonListener_rotate_right implements ActionListener {
 			public void actionPerformed(ActionEvent e) {
 				rotation += 1;
+
+				Fenster.Fenster_Back.update();
+				Fenster.Fenster_Front.update();
+				Fenster.Fenster_Left.update();
+				Fenster.Fenster_Right.update();
+				
 			}
 		}
 		
 		class ButtonListener_rotate_left implements ActionListener {
 			public void actionPerformed(ActionEvent e) {
 				rotation -= 1;
+
+				Fenster.Fenster_Back.update();
+				Fenster.Fenster_Front.update();
+				Fenster.Fenster_Left.update();
+				Fenster.Fenster_Right.update();
 			}
 		}
 		
 		class ButtonListener_get_rotation implements ActionListener {
 			public void actionPerformed(ActionEvent e) {
 				System.out.println(rotation);
+
+				Fenster.Fenster_Back.update();
+				Fenster.Fenster_Front.update();
+				Fenster.Fenster_Left.update();
+				Fenster.Fenster_Right.update();
 			}
 		}
 		
