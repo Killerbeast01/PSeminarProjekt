@@ -3,7 +3,12 @@ import javax.swing.*;
 import java.awt.event.*;
 
 public class Controller {
+	public static int fenster_front_loop = 0;
+	public static int fenster_right_loop = 0;
+	public static int fenster_back_loop = 0;
+	public static int fenster_left_loop = 0;
 	
+
 public static int rotation = 0;
 	
 	public Controller() {	
@@ -23,7 +28,6 @@ public static int rotation = 0;
 		
 		JButton rotate_right_button = new JButton("Rotate_Right"); //RotationsVariable erhöhen 
 		controller_panel.add(rotate_right_button);
-		rotate_right_button.setActionCommand("rotation_higher()");	
 		ButtonListener_rotate_right rotate_right = new ButtonListener_rotate_right();
 		rotate_right_button.addActionListener(rotate_right);
 		
@@ -61,18 +65,7 @@ public static int rotation = 0;
 			System.out.print(rotation);
 						
 		}
-		
-		public void rotation_higher() {
-			rotation = rotation + 1;
-			Fenster.Fenster_Back.update();
-			Fenster.Fenster_Front.update();
-			Fenster.Fenster_Left.update();
-			Fenster.Fenster_Right.update();
-			System.out.println("Higher");
-		}
-		
-		
-		
+			
 		class ButtonListener_rotate_right implements ActionListener {
 			public void actionPerformed(ActionEvent e) {
 				rotation += 1;
@@ -81,7 +74,6 @@ public static int rotation = 0;
 				Fenster.Fenster_Front.update();
 				Fenster.Fenster_Left.update();
 				Fenster.Fenster_Right.update();
-				
 			}
 		}
 		

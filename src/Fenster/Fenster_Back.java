@@ -10,7 +10,7 @@ import javax.swing.*;
 
 public class Fenster_Back {
 	private static int winkel;
-
+	private static JLabel rotation_label;
 	public Fenster_Back()  {
 		
 		winkel = Main.Controller.rotation + 180;
@@ -21,7 +21,7 @@ public class Fenster_Back {
 		window_back.setTitle("Back");
 		JPanel window_back_panel = new JPanel();
 		
-		JLabel rotation_label = new JLabel();
+		rotation_label = new JLabel();
 		rotation_label.setText(String.valueOf(winkel));
 		window_back_panel.add(rotation_label);
 		
@@ -35,15 +35,13 @@ public class Fenster_Back {
 		System.out.println("Objekt: läd");
 		Fenster_Back.build_Object();
 		SwingUtilities.updateComponentTreeUI(window_back);
-		while (Fenster.Fenster_Left.go == 1) {
-			rotation_label.setText(String.valueOf(winkel));;
-			
-		}
+		
 	}
 	
 	
 	public static void update() {
 		winkel = Main.Controller.rotation + 180;
+		rotation_label.setText(String.valueOf(winkel));	
 	
 	}
 	

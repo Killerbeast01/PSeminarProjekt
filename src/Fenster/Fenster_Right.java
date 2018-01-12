@@ -9,7 +9,7 @@ import javax.swing.*;
 public class Fenster_Right {
 	
 	private static int winkel;
-
+	private static JLabel rotation_label;
 	public Fenster_Right() {
 		
 		winkel = Main.Controller.rotation + 90;
@@ -20,7 +20,7 @@ public class Fenster_Right {
 		window_right.setTitle("Right");
 		JPanel window_right_panel = new JPanel();
 		
-		JLabel rotation_label = new JLabel();
+		rotation_label = new JLabel();
 		rotation_label.setText(String.valueOf(winkel));
 		
 		window_right_panel.add(rotation_label);
@@ -34,15 +34,14 @@ public class Fenster_Right {
 		System.out.println("Rightfenster: geladen");
 		System.out.println("Objekt: läd");
 		Fenster_Right.build_Object();
-		while (Fenster.Fenster_Left.go == 1) {
-			rotation_label.setText(String.valueOf(winkel));;
-		}
+		
 
 		
 	}
 	
 	public static void update() {
 		winkel = Main.Controller.rotation + 90;
+		rotation_label.setText(String.valueOf(winkel));	
 	}
 	
 	public static void build_Object() {

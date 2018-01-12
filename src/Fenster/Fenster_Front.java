@@ -5,7 +5,7 @@ import javax.swing.*;
 
 public class Fenster_Front /*extends Main.Controller */ {
 	
-	
+	private static JLabel rotation_label;
 	private static int winkel;
 	
 	public Fenster_Front() {
@@ -20,7 +20,7 @@ public class Fenster_Front /*extends Main.Controller */ {
 		window_front.setTitle("Front");
 		JPanel window_front_panel = new JPanel();
 		
-		JLabel rotation_label = new JLabel();
+		rotation_label = new JLabel();
 		
 		rotation_label.setText(String.valueOf(winkel));
 		
@@ -35,15 +35,12 @@ public class Fenster_Front /*extends Main.Controller */ {
 		System.out.println("Frontfenster: geladen");
 		System.out.println("Objekt: läd");
 		Fenster_Front.build_Object();
-		while (Fenster.Fenster_Left.go == 1) {
-			rotation_label.setText(String.valueOf(winkel));
-		}
-
-			
+					
 	}
 	
 	public static void update() {
 		winkel = Main.Controller.rotation + 0;
+		rotation_label.setText(String.valueOf(winkel));	
 	}
 	
 	public static void build_Object() {
