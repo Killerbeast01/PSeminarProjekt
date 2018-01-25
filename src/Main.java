@@ -44,19 +44,19 @@ public class Main extends Application {
             new Hologramm(90,"Altes Schulgebäude_Rechts");
             new Hologramm(180,"Altes Schulgebäude_Hinten");
             new Hologramm(270,"Altes Schulgebäude_Links");
-                });
+        });
         Aktuelles_Schulgebaude.setOnAction(event -> {System.out.println("Aktuelles Schulgebäude");
             new Hologramm(0,"Aktuelles Schulgebäude_Front");
             new Hologramm(90,"Aktuelles Schulgebäude_Rechts");
             new Hologramm(180,"Aktuelles Schulgebäude_Hinten");
             new Hologramm(270,"Aktuelles Schulgebäude_Links");
-            });
+        });
         Otto_Hahn.setOnAction(event -> {System.out.println("Otto Hahn");
             new Hologramm(0,"Otto_Hahn_Front");
             new Hologramm(90,"Otto_Hahn_Rechts");
             new Hologramm(180,"Otto_Hahn_Hinten");
             new Hologramm(270,"Otto_Hahn_Links");
-            });
+        });
         RotationAnzeiger.setOnAction(event -> System.out.println("Rotation: " + Rotation));
 
 
@@ -71,3 +71,4 @@ public class Main extends Application {
 
     }
 }
+
