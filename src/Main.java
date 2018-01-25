@@ -3,10 +3,8 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import java.util.concurrent.ExecutionException;
 
 
 public class Main extends Application {
@@ -19,7 +17,7 @@ public class Main extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
         Stage window = primaryStage;
 
         Label label1 = new Label("Controller:");
@@ -34,11 +32,31 @@ public class Main extends Application {
         Button RotationAnzeiger = new Button("Rotation:");
 
         //Actions
-        Rotate_Left.setOnAction(event -> Rotation += 1);
-        Rotate_Right.setOnAction(event -> Rotation -= 1);
-        Altes_Schulgebauede.setOnAction(event -> System.out.println("Altes Schulgebäude"));
-        Aktuelles_Schulgebaude.setOnAction(event -> System.out.println("Aktuelles Schulgebäude"));
-        Otto_Hahn.setOnAction(event -> System.out.println("Otto Hahn"));
+        Rotate_Left.setOnAction(event -> {Rotation += 1;
+            RotationAnzeiger.setText("Rotation: "+Rotation);
+        });
+        Rotate_Right.setOnAction(event -> {Rotation -= 1;
+            RotationAnzeiger.setText("Rotation: "+Rotation);
+        });
+
+        Altes_Schulgebauede.setOnAction(event -> {System.out.println("Altes Schulgebäude");
+            new Hologramm(0,"Altes Schulgebäude_Front");
+            new Hologramm(90,"Altes Schulgebäude_Rechts");
+            new Hologramm(180,"Altes Schulgebäude_Hinten");
+            new Hologramm(270,"Altes Schulgebäude_Links");
+                });
+        Aktuelles_Schulgebaude.setOnAction(event -> {System.out.println("Aktuelles Schulgebäude");
+            new Hologramm(0,"Aktuelles Schulgebäude_Front");
+            new Hologramm(90,"Aktuelles Schulgebäude_Rechts");
+            new Hologramm(180,"Aktuelles Schulgebäude_Hinten");
+            new Hologramm(270,"Aktuelles Schulgebäude_Links");
+            });
+        Otto_Hahn.setOnAction(event -> {System.out.println("Otto Hahn");
+            new Hologramm(0,"Otto_Hahn_Front");
+            new Hologramm(90,"Otto_Hahn_Rechts");
+            new Hologramm(180,"Otto_Hahn_Hinten");
+            new Hologramm(270,"Otto_Hahn_Links");
+            });
         RotationAnzeiger.setOnAction(event -> System.out.println("Rotation: " + Rotation));
 
 
