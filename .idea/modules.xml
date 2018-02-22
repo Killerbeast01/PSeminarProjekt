@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PSeminarHologrammProjekt.iml" filepath="$PROJECT_DIR$/PSeminarHologrammProjekt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PSeminar_FX.iml" filepath="$PROJECT_DIR$/PSeminar_FX.iml" />
     </modules>
   </component>
 </project>
