@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    private int Rotation = 0;
+    private static int Rotation = 0;
 
 
     public static void main (String[] args){
@@ -33,7 +33,7 @@ public class Main extends Application {
         Button ladybird = new Button("ladybird");
 
         ladybird.setOnAction(event -> {System.out.println("ladybird");
-            new ladybird();
+            Ladybird.loadladybird();
         });
 
         //Actions
