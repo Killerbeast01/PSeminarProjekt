@@ -1,50 +1,68 @@
+import com.sun.j3d.utils.universe.SimpleUniverse;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-class window {
+import javax.media.j3d.Canvas3D;
+import javax.media.j3d.Transform3D;
+import javax.media.j3d.TransformGroup;
+import javax.vecmath.Matrix4d;
 
+class window {
+    private SimpleUniverse universe = null;
+    private Canvas3D canvas = null;
+    private TransformGroup viewtrans = null;
+    private static TransformGroup tg = null;
+    private static Transform3D t3d = null;
+    private static Transform3D t3dstep = new Transform3D();
+    private static Matrix4d matrix = new Matrix4d();
     private String window_id;
     private int mainrotaion;
+    private String objectpath;
 
-    window(String new_window_id, String shownObject) {
-        window_id = new_window_id;
-        checkup();
-        create_window(window_id, mainrotaion, shownObject);
+    window(String shownObject) {
+
+
+        create_window(shownObject);
     }
 
-    private void checkup() {
-        switch (window_id) {
-            case ("front"):
-                mainrotaion = 0;
+
+    private void create_window(String object) {
+
+
+        switch (object) {
+            case "old_school":
+                objectpath = "model/old_school/ladybird2_w.obj";
                 break;
-            case ("right"):
-                mainrotaion = 90;
+            case "recent_school":
+                objectpath = "model/recent_school/recent_school_w.obj";
                 break;
-            case ("back"):
-                mainrotaion = 180;
-                break;
-            case ("left"):
-                mainrotaion = 270;
+            case "otto_hahn":
+                objectpath = "model/otto_hahn/otto_hahn_w.obj";
                 break;
         }
+
+        Object.loadObject(objectpath, mainrotaion, window_id);
+        Objectback.loadObject(objectpath, mainrotaion, window_id);
+        Objectleft.loadObject(objectpath, mainrotaion, window_id);
+        Objectright.loadObject(objectpath, mainrotaion, window_id);
     }
 
-    private void create_window(String window_id, int mainrotaion, String object) {
-        System.out.print(mainrotaion);
-        System.out.println(" " + object);
-        Stage window = new Stage();
-        window.setTitle(window_id);
 
-        Pane pn = new Pane();
-        pn.setTranslateX(1024);
-        pn.setTranslateY(768);
-        window.setScene(new Scene(pn, 1024, 768));
-        loadobject(object);
-        window.show();
-    }
 
-    private void loadobject(String object) {
+    static void leftrotation() {
+        Object.turnleft();
+        Objectback.turnleft();
+        Objectleft.turnleft();
+        Objectright.turnleft();
 
     }
+
+    static void rightrotation(){
+        Object.turnright();
+        Objectback.turnright();
+        Objectleft.turnright();
+        Objectright.turnright();
+    }
+    
 }

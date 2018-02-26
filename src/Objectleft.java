@@ -1,39 +1,40 @@
-import java.applet.*;
-import java.awt.*;
-import javax.media.j3d.*;
-import javax.vecmath.*;
-import com.sun.j3d.utils.applet.MainFrame;
-import com.sun.j3d.utils.universe.SimpleUniverse;
-import com.sun.j3d.utils.universe.PlatformGeometry;
-import com.sun.j3d.utils.behaviors.keyboard.*;
 import com.sun.j3d.loaders.Scene;
 import com.sun.j3d.loaders.objectfile.ObjectFile;
-import java.io.*;
-import java.awt.event.KeyListener;
-import java.awt.event.KeyEvent;
+import com.sun.j3d.utils.applet.MainFrame;
+import com.sun.j3d.utils.behaviors.keyboard.KeyNavigatorBehavior;
+import com.sun.j3d.utils.universe.PlatformGeometry;
+import com.sun.j3d.utils.universe.SimpleUniverse;
 
-public class Ladybird extends Applet implements KeyListener {
+import javax.media.j3d.*;
+import javax.vecmath.*;
+import java.applet.Applet;
+import java.awt.*;
+import java.io.File;
+
+public class Objectleft extends Applet /*implements KeyListener*/ {
 
     private SimpleUniverse universe = null;
     private Canvas3D canvas = null;
     private TransformGroup viewtrans = null;
-    private TransformGroup tg = null;
-    private Transform3D t3d = null;
-    private Transform3D t3dstep = new Transform3D();
-    private Matrix4d matrix = new Matrix4d();
+    private static TransformGroup tg = null;
+    private static Transform3D t3d = null;
+    private static Transform3D t3dstep = new Transform3D();
+    private static Matrix4d matrix = new Matrix4d();
 
-    public static void loadladybird() {
+    public static void loadObject(String objectpath, int mainrotation, String window_id) {
         System.out.println("load applet");
-        Ladybird applet = new Ladybird();
+        Objectleft applet = new Objectleft(objectpath);
         System.out.println("loaded applet");
         Frame frame = new MainFrame(applet, 800, 600);
         System.out.println("load frame");
         frame.setVisible(true);
+        frame.setTitle("left");
         System.out.println("loaded applet");
+        runturnleft();
     }
 
 
-    public Ladybird() {
+    public Objectleft(String objectpath) {
         System.out.println("load ladybird");
         setLayout(new BorderLayout());
         GraphicsConfiguration config = SimpleUniverse.getPreferredConfiguration();
@@ -41,17 +42,20 @@ public class Ladybird extends Applet implements KeyListener {
         add("Center", canvas);
         universe = new SimpleUniverse(canvas);
         System.out.println("create ScenceGraph");
-        BranchGroup scene = createSceneGraph();
+        BranchGroup scene = createSceneGraph(objectpath);
         System.out.println("createdSenceGraph");
         universe.getViewingPlatform().setNominalViewingTransform();
         universe.getViewer().getView().setBackClipDistance(100.0);
+/*
         canvas.addKeyListener(this);
+*/
 
         universe.addBranchGraph(scene);
+
         System.out.println("loaded ladybird");
     }
 
-    private BranchGroup createSceneGraph() {
+    private BranchGroup createSceneGraph(String objectpath) {
         BranchGroup objRoot = new BranchGroup();
 
         BoundingSphere bounds = new BoundingSphere(new Point3d(), 10000.0);
@@ -63,9 +67,9 @@ public class Ladybird extends Applet implements KeyListener {
         PlatformGeometry platformGeom = new PlatformGeometry();
         platformGeom.addChild(keyNavBeh);
         universe.getViewingPlatform().setPlatformGeometry(platformGeom);
-        System.out.println("create ladybird");
-        objRoot.addChild(createLadybird());
-        System.out.println("created ladybird");
+        System.out.println("create Object");
+        objRoot.addChild(createObject(objectpath));
+        System.out.println("created Object");
 
         Background background = new Background();
         background.setColor(0.75f, 0.69f, 0.680f);
@@ -75,7 +79,7 @@ public class Ladybird extends Applet implements KeyListener {
         return objRoot;
     }
 
-    private BranchGroup createLadybird() {
+    private BranchGroup createObject(String objectpath) {
 
         BranchGroup objRoot = new BranchGroup();
         tg = new TransformGroup();
@@ -92,7 +96,7 @@ public class Ladybird extends Applet implements KeyListener {
         ObjectFile loader = new ObjectFile(ObjectFile.RESIZE);
         Scene s = null;
 
-        File file = new java.io.File("model/ladybird2_w.obj");
+        File file = new File(objectpath);
 
         try {
             s = loader.load(file.toURI().toURL());
@@ -124,7 +128,7 @@ public class Ladybird extends Applet implements KeyListener {
 
 
 
-    public void keyTyped(KeyEvent e) {
+/*    public void keyTyped(KeyEvent e) {
         char key = e.getKeyChar();
 
         if (key == 'd') {
@@ -201,5 +205,34 @@ public class Ladybird extends Applet implements KeyListener {
     }
 
     public void keyPressed(KeyEvent e) {
+    }*/
+
+
+
+    public static void turnright() {
+        t3dstep.rotY(-0.313);
+        tg.getTransform(t3d);
+        t3d.get(matrix);
+        t3d.setTranslation(new Vector3d(0.0, 0.0, 0.0));
+        t3d.mul(t3dstep);
+        t3d.setTranslation(new Vector3d(matrix.m03, matrix.m13, matrix.m23));
+        tg.setTransform(t3d);
+    }
+
+    public static void turnleft() {
+        t3dstep.rotY(0.313);
+        tg.getTransform(t3d);
+        t3d.get(matrix);
+        t3d.setTranslation(new Vector3d(0.0, 0.0, 0.0));
+        t3d.mul(t3dstep);
+        t3d.setTranslation(new Vector3d(matrix.m03, matrix.m13, matrix.m23));
+        tg.setTransform(t3d);
+    }
+
+    private static void runturnleft() {
+
+        for (int count = 0; count < 5; count++) {
+            turnright();
+        }
     }
 }
