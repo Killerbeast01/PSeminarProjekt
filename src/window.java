@@ -1,24 +1,6 @@
-import com.sun.j3d.utils.universe.SimpleUniverse;
-import javafx.scene.Scene;
-import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
-
-import javax.media.j3d.Canvas3D;
-import javax.media.j3d.Transform3D;
-import javax.media.j3d.TransformGroup;
-import javax.vecmath.Matrix4d;
-
 class window {
-    private SimpleUniverse universe = null;
-    private Canvas3D canvas = null;
-    private TransformGroup viewtrans = null;
-    private static TransformGroup tg = null;
-    private static Transform3D t3d = null;
-    private static Transform3D t3dstep = new Transform3D();
-    private static Matrix4d matrix = new Matrix4d();
-    private String window_id;
-    private int mainrotaion;
-    private String objectpath;
+    private static String objectpath;
+    private static boolean already_created = false;
 
     window(String shownObject) {
 
@@ -27,8 +9,7 @@ class window {
     }
 
 
-    private void create_window(String object) {
-
+    private static void create_window(String object) {
 
         switch (object) {
             case "old_school":
@@ -42,10 +23,20 @@ class window {
                 break;
         }
 
-        Object.loadObject(objectpath, mainrotaion, window_id);
-        Objectback.loadObject(objectpath, mainrotaion, window_id);
-        Objectleft.loadObject(objectpath, mainrotaion, window_id);
-        Objectright.loadObject(objectpath, mainrotaion, window_id);
+
+        if (already_created) {
+            Object.objectchange(objectpath);
+            Objectright.objectchange(objectpath);
+            Objectleft.objectchange(objectpath);
+            Objectback.objectchange(objectpath);
+        }
+        else {
+            already_created = true;
+            Object.loadObject(objectpath);
+            Objectright.loadObject(objectpath);
+            Objectleft.loadObject(objectpath);
+            Objectback.loadObject(objectpath);
+        }
     }
 
 

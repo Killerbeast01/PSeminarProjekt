@@ -9,24 +9,23 @@ import com.sun.j3d.utils.behaviors.keyboard.*;
 import com.sun.j3d.loaders.Scene;
 import com.sun.j3d.loaders.objectfile.ObjectFile;
 import java.io.*;
-import java.awt.event.KeyListener;
-import java.awt.event.KeyEvent;
 
-public class Object extends Applet /*implements KeyListener*/ {
 
-    private SimpleUniverse universe = null;
-    private Canvas3D canvas = null;
-    private TransformGroup viewtrans = null;
+public class Object extends Applet  {
+
+    private SimpleUniverse universe;
     private static TransformGroup tg = null;
     private static Transform3D t3d = null;
     private static Transform3D t3dstep = new Transform3D();
     private static Matrix4d matrix = new Matrix4d();
+    private static Frame frame;
+    private static Object applet;
 
-    public static void loadObject(String objectpath, int mainrotation, String window_id) {
+    public static void loadObject(String objectpath) {
         System.out.println("load applet");
-        Object applet = new Object(objectpath);
+        applet = new Object(objectpath);
         System.out.println("loaded applet");
-        Frame frame = new MainFrame(applet, 800, 600);
+        frame = new MainFrame(applet, 800, 600);
         System.out.println("load frame");
         frame.setVisible(true);
         frame.setTitle("front");
@@ -39,7 +38,7 @@ public class Object extends Applet /*implements KeyListener*/ {
         System.out.println("load ladybird");
         setLayout(new BorderLayout());
         GraphicsConfiguration config = SimpleUniverse.getPreferredConfiguration();
-        canvas = new Canvas3D(config);
+        Canvas3D canvas = new Canvas3D(config);
         add("Center", canvas);
         universe = new SimpleUniverse(canvas);
         System.out.println("create ScenceGraph");
@@ -61,7 +60,7 @@ public class Object extends Applet /*implements KeyListener*/ {
 
         BoundingSphere bounds = new BoundingSphere(new Point3d(), 10000.0);
 
-        viewtrans = universe.getViewingPlatform().getViewPlatformTransform();
+        TransformGroup viewtrans = universe.getViewingPlatform().getViewPlatformTransform();
 
         KeyNavigatorBehavior keyNavBeh = new KeyNavigatorBehavior(viewtrans);
         keyNavBeh.setSchedulingBounds(bounds);
@@ -96,12 +95,14 @@ public class Object extends Applet /*implements KeyListener*/ {
 
         ObjectFile loader = new ObjectFile(ObjectFile.RESIZE);
         Scene s = null;
-
+        System.out.print("used filepath:");
+        System.out.println(objectpath);
         File file = new java.io.File(objectpath);
 
         try {
             s = loader.load(file.toURI().toURL());
         } catch (Exception e) {
+            //noinspection ThrowablePrintedToSystemOut
             System.err.println(e);
             System.exit(1);
         }
@@ -126,89 +127,6 @@ public class Object extends Applet /*implements KeyListener*/ {
 
         return light;
     }
-
-
-
-/*    public void keyTyped(KeyEvent e) {
-        char key = e.getKeyChar();
-
-        if (key == 'd') {
-            t3dstep.set(new Vector3d(0.0, 0.0, -0.1));
-            tg.getTransform(t3d);
-            t3d.mul(t3dstep);
-            tg.setTransform(t3d);
-        }
-
-        if (key == 's') {
-
-            t3dstep.rotY(Math.PI / 32);
-            tg.getTransform(t3d);
-            t3d.get(matrix);
-            t3d.setTranslation(new Vector3d(0.0, 0.0, 0.0));
-            t3d.mul(t3dstep);
-            t3d.setTranslation(new Vector3d(matrix.m03, matrix.m13, matrix.m23));
-            tg.setTransform(t3d);
-
-        }
-
-        if (key == 'f') {
-
-            t3dstep.rotY(-Math.PI / 32);
-            tg.getTransform(t3d);
-            t3d.get(matrix);
-            t3d.setTranslation(new Vector3d(0.0, 0.0, 0.0));
-            t3d.mul(t3dstep);
-            t3d.setTranslation(new Vector3d(matrix.m03, matrix.m13, matrix.m23));
-            tg.setTransform(t3d);
-
-        }
-
-        if (key == 'r') {
-
-            t3dstep.rotX(Math.PI / 32);
-            tg.getTransform(t3d);
-            t3d.get(matrix);
-            t3d.setTranslation(new Vector3d(0.0, 0.0, 0.0));
-            t3d.mul(t3dstep);
-            t3d.setTranslation(new Vector3d(matrix.m03, matrix.m13, matrix.m23));
-            tg.setTransform(t3d);
-
-        }
-
-        if (key == 'v') {
-
-            t3dstep.rotX(-Math.PI / 32);
-            tg.getTransform(t3d);
-            t3d.get(matrix);
-            t3d.setTranslation(new Vector3d(0.0, 0.0, 0.0));
-            t3d.mul(t3dstep);
-            t3d.setTranslation(new Vector3d(matrix.m03, matrix.m13, matrix.m23));
-            tg.setTransform(t3d);
-
-        }
-
-        if (key == 'e') {
-            t3dstep.set(new Vector3d(0.0, 0.1, 0.0));
-            tg.getTransform(t3d);
-            t3d.mul(t3dstep);
-            tg.setTransform(t3d);
-        }
-
-        if (key == 'c') {
-            t3dstep.set(new Vector3d(0.0, -0.1, 0.0));
-            tg.getTransform(t3d);
-            t3d.mul(t3dstep);
-            tg.setTransform(t3d);
-        }
-    }
-
-    public void keyReleased(KeyEvent e) {
-    }
-
-    public void keyPressed(KeyEvent e) {
-    }*/
-
-
 
     public static void turnright() {
         t3dstep.rotY(-0.313);
@@ -235,5 +153,28 @@ public class Object extends Applet /*implements KeyListener*/ {
         for (int count = 0; count < 10; count++) {
             turnleft();
         }
+    }
+
+
+
+    public static void objectchange(String objectpath) {
+        try {
+            frame.remove(applet);
+
+        } catch ( java.lang.NullPointerException e) {
+            //noinspection ThrowablePrintedToSystemOut
+            System.out.println(e);
+        }
+        frame.validate();
+        frame.update(frame.getGraphics());
+        System.out.println("load applet");
+        applet = new Object(objectpath);
+        System.out.println("loaded applet");
+
+        System.out.println("load frame");
+        frame.setVisible(true);
+        frame.setTitle("front");
+        System.out.println("loaded applet");
+        runturnleft();
     }
 }

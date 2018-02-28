@@ -20,10 +20,12 @@ public class Objectback extends Applet /*implements KeyListener*/ {
     private static Transform3D t3d = null;
     private static Transform3D t3dstep = new Transform3D();
     private static Matrix4d matrix = new Matrix4d();
+    static  Frame frame;
+    static Objectback applet;
 
-    public static void loadObject(String objectpath, int mainrotation, String window_id) {
+    public static void loadObject(String objectpath) {
         System.out.println("load applet");
-        Objectback applet = new Objectback(objectpath);
+        applet = new Objectback(objectpath);
         System.out.println("loaded applet");
         Frame frame = new MainFrame(applet, 800, 600);
         System.out.println("load frame");
@@ -33,6 +35,18 @@ public class Objectback extends Applet /*implements KeyListener*/ {
 
     }
 
+    public static void objectchange(String objectpath) {
+        frame.remove(applet);
+        frame.validate();
+        frame.update(frame.getGraphics());
+        System.out.println("load applet");
+        applet = new Objectback(objectpath);
+        System.out.println("loaded applet");
+        System.out.println("load frame");
+        frame.setVisible(true);
+        frame.setTitle("back");
+        System.out.println("loaded applet");
+    }
 
     public Objectback(String objectpath) {
         System.out.println("load ladybird");
@@ -95,7 +109,8 @@ public class Objectback extends Applet /*implements KeyListener*/ {
 
         ObjectFile loader = new ObjectFile(ObjectFile.RESIZE);
         Scene s = null;
-
+        System.out.print("used filepath:");
+        System.out.println(objectpath);
         File file = new File(objectpath);
 
         try {
