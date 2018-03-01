@@ -10,7 +10,6 @@ import com.sun.j3d.loaders.Scene;
 import com.sun.j3d.loaders.objectfile.ObjectFile;
 import java.io.*;
 
-
 public class Object extends Applet  {
 
     private SimpleUniverse universe;
@@ -22,6 +21,7 @@ public class Object extends Applet  {
     private static Object applet;
 
     public static void loadObject(String objectpath) {
+
         System.out.println("load applet");
         applet = new Object(objectpath);
         System.out.println("loaded applet");
@@ -31,31 +31,52 @@ public class Object extends Applet  {
         frame.setTitle("front");
         System.out.println("loaded applet");
         runturnleft();
+
     }
 
+    public static void objectchange(String objectpath) {
+
+        frame.remove(applet);
+        frame.validate();
+        frame.update(frame.getGraphics());
+        System.out.println("load applet");
+        applet = new Object(objectpath);
+        System.out.println("loaded applet");
+
+        System.out.println("load frame");
+        frame.setVisible(true);
+        frame.setTitle("front");
+        System.out.println("loaded applet");
+        runturnleft();
+
+    }
 
     public Object(String objectpath) {
-        System.out.println("load ladybird");
+
+        System.out.println("load object");
+
         setLayout(new BorderLayout());
         GraphicsConfiguration config = SimpleUniverse.getPreferredConfiguration();
+
         Canvas3D canvas = new Canvas3D(config);
         add("Center", canvas);
+
         universe = new SimpleUniverse(canvas);
+
         System.out.println("create ScenceGraph");
         BranchGroup scene = createSceneGraph(objectpath);
         System.out.println("createdSenceGraph");
+
         universe.getViewingPlatform().setNominalViewingTransform();
         universe.getViewer().getView().setBackClipDistance(100.0);
-/*
-        canvas.addKeyListener(this);
-*/
-
         universe.addBranchGraph(scene);
 
-        System.out.println("loaded ladybird");
+        System.out.println("loaded object");
+
     }
 
     private BranchGroup createSceneGraph(String objectpath) {
+
         BranchGroup objRoot = new BranchGroup();
 
         BoundingSphere bounds = new BoundingSphere(new Point3d(), 10000.0);
@@ -64,9 +85,12 @@ public class Object extends Applet  {
 
         KeyNavigatorBehavior keyNavBeh = new KeyNavigatorBehavior(viewtrans);
         keyNavBeh.setSchedulingBounds(bounds);
+
         PlatformGeometry platformGeom = new PlatformGeometry();
         platformGeom.addChild(keyNavBeh);
+
         universe.getViewingPlatform().setPlatformGeometry(platformGeom);
+
         System.out.println("create Object");
         objRoot.addChild(createObject(objectpath));
         System.out.println("created Object");
@@ -77,6 +101,7 @@ public class Object extends Applet  {
         objRoot.addChild(background);
 
         return objRoot;
+
     }
 
     private BranchGroup createObject(String objectpath) {
@@ -97,7 +122,7 @@ public class Object extends Applet  {
         Scene s = null;
         System.out.print("used filepath:");
         System.out.println(objectpath);
-        File file = new java.io.File(objectpath);
+        File file = new File(objectpath);
 
         try {
             s = loader.load(file.toURI().toURL());
@@ -116,19 +141,21 @@ public class Object extends Applet  {
 
         return objRoot;
 
-
     }
 
     private Light createLight() {
+
         DirectionalLight light = new DirectionalLight(true, new Color3f(1.0f,
                 1.0f, 1.0f), new Vector3f(-0.3f, 0.2f, -1.0f));
 
         light.setInfluencingBounds(new BoundingSphere(new Point3d(), 10000.0));
 
         return light;
+
     }
 
     public static void turnright() {
+
         t3dstep.rotY(-0.313);
         tg.getTransform(t3d);
         t3d.get(matrix);
@@ -136,9 +163,11 @@ public class Object extends Applet  {
         t3d.mul(t3dstep);
         t3d.setTranslation(new Vector3d(matrix.m03, matrix.m13, matrix.m23));
         tg.setTransform(t3d);
+
     }
 
     public static void turnleft() {
+
         t3dstep.rotY(0.313);
         tg.getTransform(t3d);
         t3d.get(matrix);
@@ -146,35 +175,15 @@ public class Object extends Applet  {
         t3d.mul(t3dstep);
         t3d.setTranslation(new Vector3d(matrix.m03, matrix.m13, matrix.m23));
         tg.setTransform(t3d);
+
     }
 
     private static void runturnleft() {
 
         for (int count = 0; count < 10; count++) {
+
             turnleft();
+
         }
-    }
-
-
-
-    public static void objectchange(String objectpath) {
-        try {
-            frame.remove(applet);
-
-        } catch ( java.lang.NullPointerException e) {
-            //noinspection ThrowablePrintedToSystemOut
-            System.out.println(e);
-        }
-        frame.validate();
-        frame.update(frame.getGraphics());
-        System.out.println("load applet");
-        applet = new Object(objectpath);
-        System.out.println("loaded applet");
-
-        System.out.println("load frame");
-        frame.setVisible(true);
-        frame.setTitle("front");
-        System.out.println("loaded applet");
-        runturnleft();
     }
 }
