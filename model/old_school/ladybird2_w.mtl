@@ -1,0 +1,240 @@
+# Exported from Wings 3D 2.1.5
+newmtl Body
+Ns 90.0
+d 1.0
+illum 2
+Kd 0.64 0.64 0.64
+Ka 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ke 0.0 0.0 0.0
+map_Kd body.jpg
+
+newmtl Body10
+Ns 90.0
+d 1.0
+illum 2
+Kd 0.64 0.64 0.64
+Ka 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ke 0.0 0.0 0.0
+map_Kd body.jpg
+
+newmtl Body11
+Ns 90.0
+d 1.0
+illum 2
+Kd 0.64 0.64 0.64
+Ka 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ke 0.0 0.0 0.0
+map_Kd body.jpg
+
+newmtl Body12
+Ns 90.0
+d 1.0
+illum 2
+Kd 0.64 0.64 0.64
+Ka 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ke 0.0 0.0 0.0
+map_Kd body.jpg
+
+newmtl Body13
+Ns 90.0
+d 1.0
+illum 2
+Kd 0.64 0.64 0.64
+Ka 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ke 0.0 0.0 0.0
+map_Kd body.jpg
+
+newmtl Body14
+Ns 90.0
+d 1.0
+illum 2
+Kd 0.64 0.64 0.64
+Ka 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ke 0.0 0.0 0.0
+map_Kd body.jpg
+
+newmtl Body15
+Ns 90.0
+d 1.0
+illum 2
+Kd 0.64 0.64 0.64
+Ka 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ke 0.0 0.0 0.0
+map_Kd body.jpg
+
+newmtl Body16
+Ns 90.0
+d 1.0
+illum 2
+Kd 0.64 0.64 0.64
+Ka 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ke 0.0 0.0 0.0
+map_Kd body.jpg
+
+newmtl Body17
+Ns 90.0
+d 1.0
+illum 2
+Kd 0.64 0.64 0.64
+Ka 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ke 0.0 0.0 0.0
+map_Kd body.jpg
+
+newmtl Body18
+Ns 90.0
+d 1.0
+illum 2
+Kd 0.64 0.64 0.64
+Ka 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ke 0.0 0.0 0.0
+map_Kd body.jpg
+
+newmtl Body19
+Ns 90.0
+d 1.0
+illum 2
+Kd 0.64 0.64 0.64
+Ka 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ke 0.0 0.0 0.0
+map_Kd body.jpg
+
+newmtl Body2
+Ns 90.0
+d 1.0
+illum 2
+Kd 0.64 0.64 0.64
+Ka 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ke 0.0 0.0 0.0
+map_Kd body.jpg
+
+newmtl Body3
+Ns 90.0
+d 1.0
+illum 2
+Kd 0.64 0.64 0.64
+Ka 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ke 0.0 0.0 0.0
+map_Kd body.jpg
+
+newmtl Body4
+Ns 90.0
+d 1.0
+illum 2
+Kd 0.64 0.64 0.64
+Ka 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ke 0.0 0.0 0.0
+map_Kd body.jpg
+
+newmtl Body5
+Ns 90.0
+d 1.0
+illum 2
+Kd 0.64 0.64 0.64
+Ka 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ke 0.0 0.0 0.0
+map_Kd body.jpg
+
+newmtl Body6
+Ns 90.0
+d 1.0
+illum 2
+Kd 0.64 0.64 0.64
+Ka 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ke 0.0 0.0 0.0
+map_Kd body.jpg
+
+newmtl Body7
+Ns 90.0
+d 1.0
+illum 2
+Kd 0.64 0.64 0.64
+Ka 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ke 0.0 0.0 0.0
+map_Kd body.jpg
+
+newmtl Body8
+Ns 90.0
+d 1.0
+illum 2
+Kd 0.64 0.64 0.64
+Ka 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ke 0.0 0.0 0.0
+map_Kd body.jpg
+
+newmtl Body9
+Ns 90.0
+d 1.0
+illum 2
+Kd 0.64 0.64 0.64
+Ka 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ke 0.0 0.0 0.0
+map_Kd body.jpg
+
+newmtl Head
+Ns 90.0
+d 1.0
+illum 2
+Kd 0.64 0.64 0.64
+Ka 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ke 0.0 0.0 0.0
+map_Kd head.jpg
+
+newmtl Thorax
+Ns 90.0
+d 1.0
+illum 2
+Kd 0.64 0.64 0.64
+Ka 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ke 0.0 0.0 0.0
+map_Kd thorax.jpg
+
+newmtl Wings
+Ns 90.0
+d 1.0
+illum 2
+Kd 0.64 0.64 0.64
+Ka 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ke 0.0 0.0 0.0
+map_Kd wings.jpg
+
+newmtl Wings2
+Ns 90.0
+d 1.0
+illum 2
+Kd 0.64 0.64 0.64
+Ka 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ke 0.0 0.0 0.0
+map_Kd wings.jpg
+
+newmtl default
+Ns 0.0
+d 1.0
+illum 2
+Kd 0.7898538076923077 0.8133333333333334 0.6940444444444445
+Ka 0.7898538076923077 0.8133333333333334 0.6940444444444445
+Ks 0.0 0.0 0.0
+Ke 0.0 0.0 0.0
+
