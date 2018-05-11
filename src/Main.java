@@ -8,6 +8,7 @@ public class Main implements MouseListener {
     private static int Rotation = 0;
     static Controller mycontroller;
 
+
     public static void main (String[] args){
 
         mycontroller = new Controller();
@@ -50,8 +51,31 @@ public class Main implements MouseListener {
 
         }
 
+        public static void rotatereset() {
 
-    //Vorreiter für Spätere implementation von längeren Clicks;
+
+            if (Rotation != 0) {
+                if (Rotation > 0) {
+                    int i = 0;
+                    System.out.println("reset " + Rotation);
+                    for (; i < Rotation; i++) {
+                        window.rightrotation();
+                    }
+                } else {
+                    int i = 0;
+                    for (; i < Rotation; i++) {
+                        window.leftrotation();
+
+                    }
+
+                }
+            }
+            Rotation = 0;
+        }
+
+
+
+            //Vorreiter für Spätere implementation von längeren Clicks;
 
     @Override
     public void mouseClicked(MouseEvent mouseEvent) {

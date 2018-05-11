@@ -9,6 +9,7 @@ public class Controller extends JFrame {
     private JButton btnneuesschulgebäude;
     private JButton btnrotateleft;
     private JButton btnrotateright;
+    private JButton btnrotationreset;
 
     public Controller() {
         super("Controller");
@@ -22,6 +23,7 @@ public class Controller extends JFrame {
         btnottohahn.addActionListener(actionEvent -> Main.showottohahn());
         btnrotateleft.addActionListener(actionEvent -> Main.rotateleft());
         btnrotateright.addActionListener(actionEvent -> Main.rotateright());
+        btnrotationreset.addActionListener(actionEvent -> Main.rotatereset());
 
         setVisible(true);
 
