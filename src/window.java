@@ -1,4 +1,4 @@
-class window {
+class window extends Thread {
 
     private static String objectpath;
     private static boolean already_created = false;
@@ -23,19 +23,21 @@ class window {
 
         if (already_created) {
 
-            Object.objectchange(objectpath);
-            Objectright.objectchange(objectpath);
-            Objectleft.objectchange(objectpath);
-            Objectback.objectchange(objectpath);
+            Thread obj1 = new hilfclassethread(5, objectpath);
+            Thread obj2 = new hilfclassethread(6, objectpath);
+            Thread obj3 = new hilfclassethread(7, objectpath);
+            Thread obj4 = new hilfclassethread(8, objectpath);
+
 
         }
         else {
 
             already_created = true;
-            Object.loadObject(objectpath);
-            Objectright.loadObject(objectpath);
-            Objectleft.loadObject(objectpath);
-            Objectback.loadObject(objectpath);
+            Thread obj1 = new hilfclassethread(1, objectpath);
+            Thread obj2 = new hilfclassethread(2, objectpath);
+            Thread obj3 = new hilfclassethread(3, objectpath);
+            Thread obj4 = new hilfclassethread(4, objectpath);
+
 
         }
     }

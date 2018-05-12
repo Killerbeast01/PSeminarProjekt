@@ -44,6 +44,9 @@ public class Objectback extends Applet {
         System.out.println("loaded applet");
 
         System.out.println("load frame");
+        frame.add(applet);
+        frame.validate();
+        frame.update(frame.getGraphics());
         frame.setVisible(true);
         frame.setTitle("back");
         System.out.println("loaded applet");
@@ -96,7 +99,7 @@ public class Objectback extends Applet {
         System.out.println("created Object");
 
         Background background = new Background();
-        background.setColor(0.75f, 0.69f, 0.680f);
+        background.setColor(0.5f, 0.5f, 0.5f);
         background.setApplicationBounds(bounds);
         objRoot.addChild(background);
 

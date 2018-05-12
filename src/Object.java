@@ -10,7 +10,7 @@ import com.sun.j3d.loaders.Scene;
 import com.sun.j3d.loaders.objectfile.ObjectFile;
 import java.io.*;
 
-public class Object extends Applet  {
+public class Object extends Applet {
 
     private SimpleUniverse universe;
     private static TransformGroup tg = null;
@@ -20,34 +20,39 @@ public class Object extends Applet  {
     private static Frame frame;
     private static Object applet;
 
-    public static void loadObject(String objectpath) {
+       public static void loadObject(String objectpath) {
 
-        System.out.println("load applet");
+        System.out.println("load applet for obj front");
         applet = new Object(objectpath);
-        System.out.println("loaded applet");
+        System.out.println("loaded applet for obj front");
         frame = new MainFrame(applet, 800, 600);
-        System.out.println("load frame");
+        System.out.println("load frame for obj front");
         frame.setVisible(true);
         frame.setTitle("front");
-        System.out.println("loaded applet");
+        System.out.println("loaded frame for obj front");
         runturnleft();
 
     }
+
 
     public static void objectchange(String objectpath) {
 
         frame.remove(applet);
         frame.validate();
         frame.update(frame.getGraphics());
-        System.out.println("load applet");
+        System.out.println("load applet again");
+        applet = null;
         applet = new Object(objectpath);
         System.out.println("loaded applet");
-
         System.out.println("load frame");
+        frame.add(applet);
+        frame.validate();
+        frame.update(frame.getGraphics());
         frame.setVisible(true);
         frame.setTitle("front");
-        System.out.println("loaded applet");
+        System.out.println("loaded applet for obj front again");
         runturnleft();
+
 
     }
 
@@ -96,7 +101,7 @@ public class Object extends Applet  {
         System.out.println("created Object");
 
         Background background = new Background();
-        background.setColor(0.75f, 0.69f, 0.680f);
+        background.setColor(0.5f, 0.5f, 0.5f);
         background.setApplicationBounds(bounds);
         objRoot.addChild(background);
 

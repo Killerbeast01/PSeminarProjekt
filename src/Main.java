@@ -62,8 +62,10 @@ public class Main implements MouseListener {
                         window.rightrotation();
                     }
                 } else {
+                    System.out.println("reset " + Rotation);
                     int i = 0;
-                    for (; i < Rotation; i++) {
+                    for (; i > Rotation; i--) {
+                        System.out.println("starte reset" + i);
                         window.leftrotation();
 
                     }
@@ -72,6 +74,10 @@ public class Main implements MouseListener {
             }
             Rotation = 0;
         }
+
+
+
+
 
 
 
