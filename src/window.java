@@ -23,21 +23,26 @@ class window extends Thread {
 
         if (already_created) {
 
-            Thread obj1 = new hilfclassethread(5, objectpath);
-            Thread obj2 = new hilfclassethread(6, objectpath);
-            Thread obj3 = new hilfclassethread(7, objectpath);
-            Thread obj4 = new hilfclassethread(8, objectpath);
-
-
+            Thread obj5 = new Thread(new hilfclassethread(5, objectpath));
+            Thread obj6 = new Thread(new hilfclassethread(6, objectpath));
+            Thread obj7 = new Thread(new hilfclassethread(7, objectpath));
+            Thread obj8 = new Thread(new hilfclassethread(8, objectpath));
+            obj5.start();
+            obj6.start();
+            obj7.start();
+            obj8.start();
         }
         else {
 
             already_created = true;
-            Thread obj1 = new hilfclassethread(1, objectpath);
-            Thread obj2 = new hilfclassethread(2, objectpath);
-            Thread obj3 = new hilfclassethread(3, objectpath);
-            Thread obj4 = new hilfclassethread(4, objectpath);
-
+            Thread obj1 = new Thread(new hilfclassethread(1, objectpath));
+            Thread obj2 = new Thread(new hilfclassethread(2, objectpath));
+            Thread obj3 = new Thread(new hilfclassethread(3, objectpath));
+            Thread obj4 = new Thread(new hilfclassethread(4, objectpath));
+            obj1.start();
+            obj2.start();
+            obj3.start();
+            obj4.start();
 
         }
     }
