@@ -7,25 +7,6 @@ public class hilfclassethread implements Runnable{
             Fall = i;
             path = objectpath;
 
-            switch (i) {
-                case 1: Object.loadObject(objectpath);
-                    break;
-                case 2: Objectback.loadObject(objectpath);
-                    break;
-                case 3: Objectleft.loadObject(objectpath);
-                    break;
-                case 4: Objectright.loadObject(objectpath);
-                    break;
-                case 5: Object.objectchange(objectpath);
-                    break;
-                case 6: Objectback.objectchange(objectpath);
-                    break;
-                case 7: Objectleft.objectchange(objectpath);
-                    break;
-                case 8: Objectright.objectchange(objectpath);
-                    break;
-                    }
-
 
     }
 

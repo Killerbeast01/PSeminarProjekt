@@ -1,4 +1,4 @@
-class window extends Thread {
+class window {
 
     private static String objectpath;
     private static boolean already_created = false;
