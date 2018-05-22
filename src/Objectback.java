@@ -27,6 +27,7 @@ public class Objectback extends Applet {
         System.out.println("loaded applet");
         frame = new MainFrame(applet, 800, 600);
         System.out.println("load frame");
+        frame.setBackground(Color.BLACK);
         frame.setVisible(true);
         frame.setTitle("back");
         System.out.println("loaded applet");

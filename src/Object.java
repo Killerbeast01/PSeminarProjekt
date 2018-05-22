@@ -27,6 +27,7 @@ public class Object extends Applet {
         System.out.println("loaded applet for obj front");
         frame = new MainFrame(applet, 800, 600);
         System.out.println("load frame for obj front");
+        frame.setBackground(Color.BLACK);
         frame.setVisible(true);
         frame.setTitle("front");
         System.out.println("loaded frame for obj front");
@@ -36,12 +37,13 @@ public class Object extends Applet {
 
 
     public static void objectchange(String objectpath) {
-
+        applet = null;
         frame.remove(applet);
+
         frame.validate();
         frame.update(frame.getGraphics());
         System.out.println("load applet again");
-        applet = null;
+
         applet = new Object(objectpath);
         System.out.println("loaded applet");
         System.out.println("load frame");

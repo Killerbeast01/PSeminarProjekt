@@ -27,6 +27,7 @@ public class Objectright extends Applet {
         System.out.println("loaded applet");
         frame = new MainFrame(applet, 800, 600);
         System.out.println("load frame");
+        frame.setBackground(Color.BLACK);
         frame.setVisible(true);
         frame.setTitle("right");
         System.out.println("loaded applet");
