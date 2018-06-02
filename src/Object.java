@@ -37,7 +37,7 @@ public class Object extends Applet {
 
 
     public static void objectchange(String objectpath) {
-        applet = null;
+        //applet = null;
         frame.remove(applet);
 
         frame.validate();

@@ -49,7 +49,7 @@ class window {
 
         //Rotation;
 
-    static void leftrotation() {
+    static void rightrotation() {
 
         Object.turnleft();
         Objectback.turnleft();
@@ -58,7 +58,7 @@ class window {
 
     }
 
-    static void rightrotation(){
+    static void leftrotation(){
 
         Object.turnright();
         Objectback.turnright();
