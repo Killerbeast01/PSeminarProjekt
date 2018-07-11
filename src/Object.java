@@ -17,10 +17,11 @@ public class Object extends Applet {
     private static Transform3D t3d = null;
     private static Transform3D t3dstep = new Transform3D();
     private static Matrix4d matrix = new Matrix4d();
-    private static Frame frame;
+    static Frame frame;
     private static Object applet;
+    private static String objectpath = Main.objectpath;
 
-       public static void loadObject(String objectpath) {
+       public static void loadObject() {
 
         System.out.println("load applet for obj front");
         applet = new Object(objectpath);
@@ -28,7 +29,7 @@ public class Object extends Applet {
         frame = new MainFrame(applet, 800, 600);
         System.out.println("load frame for obj front");
         frame.setBackground(Color.BLACK);
-        frame.setVisible(true);
+        frame.setVisible(false);
         frame.setTitle("front");
         System.out.println("loaded frame for obj front");
         runturnleft();
@@ -36,7 +37,7 @@ public class Object extends Applet {
     }
 
 
-    public static void objectchange(String objectpath) {
+    public static void objectchange() {
         //applet = null;
         frame.remove(applet);
 

@@ -4,13 +4,14 @@ import com.sun.j3d.utils.applet.MainFrame;
 import com.sun.j3d.utils.behaviors.keyboard.KeyNavigatorBehavior;
 import com.sun.j3d.utils.universe.PlatformGeometry;
 import com.sun.j3d.utils.universe.SimpleUniverse;
+
 import javax.media.j3d.*;
 import javax.vecmath.*;
 import java.applet.Applet;
 import java.awt.*;
 import java.io.File;
 
-public class Objectright extends Applet {
+public class Objectbacknew extends Applet {
 
     private SimpleUniverse universe;
     private static TransformGroup tg = null;
@@ -18,31 +19,32 @@ public class Objectright extends Applet {
     private static Transform3D t3dstep = new Transform3D();
     private static Matrix4d matrix = new Matrix4d();
     static Frame frame;
-    private static Objectright applet;
-    private static String objectpath = Main.objectpath;
+    private static Objectbacknew applet;
+    private static String objectpath = Main.objectpathnew;
 
-    public static void loadObject() {
+    public static void loadObject( ) {
 
         System.out.println("load applet");
-        applet = new Objectright(objectpath);
+        applet = new Objectbacknew(objectpath);
         System.out.println("loaded applet");
         frame = new MainFrame(applet, 800, 600);
         System.out.println("load frame");
         frame.setBackground(Color.BLACK);
         frame.setVisible(false);
-        frame.setTitle("right");
+        frame.setTitle("back");
         System.out.println("loaded applet");
-        runturnright();
+
+        //Object wird von anfang an "falsch herum" angezeigt, deshalb kein turn() notwendig;
 
     }
 
-    public static void objectchange( ) {
+    public static void objectchange() {
 
         frame.remove(applet);
         frame.validate();
         frame.update(frame.getGraphics());
         System.out.println("load applet");
-        applet = new Objectright(objectpath);
+        applet = new Objectbacknew(objectpath);
         System.out.println("loaded applet");
 
         System.out.println("load frame");
@@ -50,13 +52,13 @@ public class Objectright extends Applet {
         frame.validate();
         frame.update(frame.getGraphics());
         frame.setVisible(true);
-        frame.setTitle("right");
+        frame.setTitle("back");
         System.out.println("loaded applet");
-        runturnright();
+        //Object wird von anfang an "falsch herum" angezeigt, deshalb kein turn() notwendig;
 
     }
 
-    private Objectright(String objectpath) {
+    private Objectbacknew(String objectpath) {
 
         System.out.println("load object");
 
@@ -181,14 +183,5 @@ public class Objectright extends Applet {
         t3d.setTranslation(new Vector3d(matrix.m03, matrix.m13, matrix.m23));
         tg.setTransform(t3d);
 
-    }
-
-    private static void runturnright() {
-
-        for (int count = 0; count < 5; count++) {
-
-            turnleft();
-
-        }
     }
 }

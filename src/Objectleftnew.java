@@ -4,45 +4,46 @@ import com.sun.j3d.utils.applet.MainFrame;
 import com.sun.j3d.utils.behaviors.keyboard.KeyNavigatorBehavior;
 import com.sun.j3d.utils.universe.PlatformGeometry;
 import com.sun.j3d.utils.universe.SimpleUniverse;
+
 import javax.media.j3d.*;
 import javax.vecmath.*;
 import java.applet.Applet;
 import java.awt.*;
 import java.io.File;
 
-public class Objectright extends Applet {
+public class Objectleftnew extends Applet {
 
     private SimpleUniverse universe;
     private static TransformGroup tg = null;
     private static Transform3D t3d = null;
     private static Transform3D t3dstep = new Transform3D();
     private static Matrix4d matrix = new Matrix4d();
-    static Frame frame;
-    private static Objectright applet;
-    private static String objectpath = Main.objectpath;
+    static  Frame frame;
+    private static Objectleftnew applet;
+    private static String objectpath = Main.objectpathnew;
 
-    public static void loadObject() {
+    public static void loadObject( ) {
 
         System.out.println("load applet");
-        applet = new Objectright(objectpath);
+        applet = new Objectleftnew(objectpath);
         System.out.println("loaded applet");
         frame = new MainFrame(applet, 800, 600);
         System.out.println("load frame");
         frame.setBackground(Color.BLACK);
         frame.setVisible(false);
-        frame.setTitle("right");
+        frame.setTitle("left");
         System.out.println("loaded applet");
-        runturnright();
+        runturnleft();
 
     }
 
-    public static void objectchange( ) {
+    public static void objectchange() {
 
         frame.remove(applet);
         frame.validate();
         frame.update(frame.getGraphics());
         System.out.println("load applet");
-        applet = new Objectright(objectpath);
+        applet = new Objectleftnew(objectpath);
         System.out.println("loaded applet");
 
         System.out.println("load frame");
@@ -50,13 +51,13 @@ public class Objectright extends Applet {
         frame.validate();
         frame.update(frame.getGraphics());
         frame.setVisible(true);
-        frame.setTitle("right");
+        frame.setTitle("left");
         System.out.println("loaded applet");
-        runturnright();
+        runturnleft();
 
     }
 
-    private Objectright(String objectpath) {
+    private Objectleftnew(String objectpath) {
 
         System.out.println("load object");
 
@@ -183,11 +184,11 @@ public class Objectright extends Applet {
 
     }
 
-    private static void runturnright() {
+    private static void runturnleft() {
 
         for (int count = 0; count < 5; count++) {
 
-            turnleft();
+            turnright();
 
         }
     }

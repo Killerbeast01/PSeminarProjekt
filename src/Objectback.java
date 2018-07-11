@@ -17,10 +17,11 @@ public class Objectback extends Applet {
     private static Transform3D t3d = null;
     private static Transform3D t3dstep = new Transform3D();
     private static Matrix4d matrix = new Matrix4d();
-    private static Frame frame;
+    static Frame frame;
     private static Objectback applet;
+    private static String objectpath = Main.objectpath;
 
-    public static void loadObject(String objectpath) {
+    public static void loadObject() {
 
         System.out.println("load applet");
         applet = new Objectback(objectpath);
@@ -28,14 +29,15 @@ public class Objectback extends Applet {
         frame = new MainFrame(applet, 800, 600);
         System.out.println("load frame");
         frame.setBackground(Color.BLACK);
-        frame.setVisible(true);
+        frame.setVisible(false);
         frame.setTitle("back");
         System.out.println("loaded applet");
+
         //Object wird von anfang an "falsch herum" angezeigt, deshalb kein turn() notwendig;
 
     }
 
-    public static void objectchange(String objectpath) {
+    public static void objectchange() {
 
         frame.remove(applet);
         frame.validate();
