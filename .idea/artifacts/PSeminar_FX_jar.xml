@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="PSeminar_FX:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/PSeminar_FX_jar</output-path>
+    <root id="archive" name="PSeminar_FX_jar.jar">
+      <element id="module-output" name="PSeminar_FX" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/libs/javax.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/libs/j3dcore.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/libs/j3dutils.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/libs/vecmath.jar" path-in-jar="/" />
+      <element id="dir-copy" path="$PROJECT_DIR$/model" />
+      <element id="library" level="project" name="j3dcore" />
+      <element id="library" level="project" name="j3dutils" />
+      <element id="library" level="project" name="javax" />
+      <element id="library" level="project" name="jimModelBrowserJFX-0_4_1" />
+      <element id="library" level="project" name="vecmath" />
+    </root>
+  </artifact>
+</component>

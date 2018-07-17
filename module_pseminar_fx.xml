@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_pseminar_fx" default="compile.module.pseminar_fx">
+  <dirname property="module.pseminar_fx.basedir" file="${ant.file.module_pseminar_fx}"/>
+  
+  <property name="module.jdk.home.pseminar_fx" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.pseminar_fx" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.pseminar_fx" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.pseminar_fx" value="-encoding UTF-8 -source 1.8 -target 1.8 ${compiler.args}"/>
+  
+  <property name="pseminar_fx.output.dir" value="${module.pseminar_fx.basedir}/out/production/PSeminar_FX"/>
+  <property name="pseminar_fx.testoutput.dir" value="${module.pseminar_fx.basedir}/out/test/PSeminar_FX"/>
+  
+  <path id="pseminar_fx.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="pseminar_fx.module.production.classpath">
+    <path refid="${module.jdk.classpath.pseminar_fx}"/>
+    <path refid="library.javax.classpath"/>
+    <path refid="library.j3dcore.classpath"/>
+    <path refid="library.j3dutils.classpath"/>
+    <path refid="library.vecmath.classpath"/>
+  </path>
+  
+  <path id="pseminar_fx.runtime.production.module.classpath">
+    <pathelement location="${pseminar_fx.output.dir}"/>
+    <path refid="library.javax.classpath"/>
+    <path refid="library.j3dcore.classpath"/>
+    <path refid="library.j3dutils.classpath"/>
+    <path refid="library.vecmath.classpath"/>
+  </path>
+  
+  <path id="pseminar_fx.module.classpath">
+    <path refid="${module.jdk.classpath.pseminar_fx}"/>
+    <pathelement location="${pseminar_fx.output.dir}"/>
+    <path refid="library.javax.classpath"/>
+    <path refid="library.j3dcore.classpath"/>
+    <path refid="library.j3dutils.classpath"/>
+    <path refid="library.vecmath.classpath"/>
+  </path>
+  
+  <path id="pseminar_fx.runtime.module.classpath">
+    <pathelement location="${pseminar_fx.testoutput.dir}"/>
+    <pathelement location="${pseminar_fx.output.dir}"/>
+    <path refid="library.javax.classpath"/>
+    <path refid="library.j3dcore.classpath"/>
+    <path refid="library.j3dutils.classpath"/>
+    <path refid="library.vecmath.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.pseminar_fx">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.pseminar_fx">
+    <patternset refid="excluded.from.module.pseminar_fx"/>
+  </patternset>
+  
+  <path id="pseminar_fx.module.sourcepath">
+    <dirset dir="${module.pseminar_fx.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.pseminar_fx" depends="compile.module.pseminar_fx.production,compile.module.pseminar_fx.tests" description="Compile module PSeminar_FX"/>
+  
+  <target name="compile.module.pseminar_fx.production" depends="register.custom.compilers" description="Compile module PSeminar_FX; production classes">
+    <mkdir dir="${pseminar_fx.output.dir}"/>
+    <javac2 destdir="${pseminar_fx.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.pseminar_fx}/javac">
+      <compilerarg line="${compiler.args.pseminar_fx}"/>
+      <bootclasspath refid="pseminar_fx.module.bootclasspath"/>
+      <classpath refid="pseminar_fx.module.production.classpath"/>
+      <src refid="pseminar_fx.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.pseminar_fx"/>
+    </javac2>
+    
+    <copy todir="${pseminar_fx.output.dir}">
+      <fileset dir="${module.pseminar_fx.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.pseminar_fx.tests" depends="register.custom.compilers,compile.module.pseminar_fx.production" description="compile module PSeminar_FX; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.pseminar_fx" description="cleanup module">
+    <delete dir="${pseminar_fx.output.dir}"/>
+    <delete dir="${pseminar_fx.testoutput.dir}"/>
+  </target>
+</project>

@@ -17,11 +17,10 @@ public class Objectright extends Applet {
     private static Transform3D t3d = null;
     private static Transform3D t3dstep = new Transform3D();
     private static Matrix4d matrix = new Matrix4d();
-    static Frame frame;
+    private static Frame frame;
     private static Objectright applet;
-    private static String objectpath = Main.objectpath;
 
-    public static void loadObject() {
+    public static void loadObject(String objectpath) {
 
         System.out.println("load applet");
         applet = new Objectright(objectpath);
@@ -29,14 +28,14 @@ public class Objectright extends Applet {
         frame = new MainFrame(applet, 800, 600);
         System.out.println("load frame");
         frame.setBackground(Color.BLACK);
-        frame.setVisible(false);
+        frame.setVisible(true);
         frame.setTitle("right");
         System.out.println("loaded applet");
         runturnright();
 
     }
 
-    public static void objectchange( ) {
+    public static void objectchange(String objectpath) {
 
         frame.remove(applet);
         frame.validate();
