@@ -1,38 +1,27 @@
 public class hilfclassethread implements Runnable{
 
     private int Fall;
-    private String path;
 
-    public hilfclassethread(int i, String objectpath) {
+    hilfclassethread(int i ) {
+
             Fall = i;
-            path = objectpath;
-
 
     }
 
     @Override
     public void run() {
+
         switch (Fall) {
-            case 1: Object.loadObject(path);
+            case 1: Object.loadObject();
                 break;
-            case 2: Objectback.loadObject(path);
+            case 2: Objectback.loadObject();
                 break;
-            case 3: Objectleft.loadObject(path);
+            case 3: Objectleft.loadObject();
                 break;
-            case 4: Objectright.loadObject(path);
-                break;
-            case 5: Object.objectchange(path);
-                break;
-            case 6: Objectback.objectchange(path);
-                break;
-            case 7: Objectleft.objectchange(path);
-                break;
-            case 8: Objectright.objectchange(path);
+            case 4: Objectright.loadObject();
                 break;
         }
 
-
-    }
-
+    } //Erzeugt je nach übergebenem Fall ein Fenster in einem Thread
 
 }
