@@ -7,19 +7,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Arrow icons eingefügt;&#10;front reload bug gefixt;">
-      <change beforePath="" afterPath="$PROJECT_DIR$/model/otto_hahn/IronMan.mtl" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/model/otto_hahn/IronMan.obj" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/model/otto_hahn/v1_0_IronManRigged.max" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/model/arrow_turn_left.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/model/arrow_turn_right.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Controller.fxml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/model/arrow_turn_left.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/model/arrow_turn_right.png" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/Controller.form" afterPath="$PROJECT_DIR$/src/Controller.form" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/PSeminar_FX_jar/PSeminar_FX_jar.jar" afterPath="$PROJECT_DIR$/out/artifacts/PSeminar_FX_jar/PSeminar_FX_jar.jar" />
+      <change beforePath="$PROJECT_DIR$/out/production/PSeminar_FX/Controller.class" afterPath="$PROJECT_DIR$/out/production/PSeminar_FX/Controller.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/PSeminar_FX/Main.class" afterPath="$PROJECT_DIR$/out/production/PSeminar_FX/Main.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/PSeminar_FX/drawable/arrow_turn_left.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/PSeminar_FX/drawable/arrow_turn_right.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/Controller.form" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/Controller.java" afterPath="$PROJECT_DIR$/src/Controller.java" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/Object.java" afterPath="$PROJECT_DIR$/src/Object.java" />
-      <change beforePath="$PROJECT_DIR$/src/Objectback.java" afterPath="$PROJECT_DIR$/src/Objectback.java" />
-      <change beforePath="$PROJECT_DIR$/src/Objectleft.java" afterPath="$PROJECT_DIR$/src/Objectleft.java" />
-      <change beforePath="$PROJECT_DIR$/src/Objectright.java" afterPath="$PROJECT_DIR$/src/Objectright.java" />
-      <change beforePath="$PROJECT_DIR$/src/hilfclassethread.java" afterPath="$PROJECT_DIR$/src/hilfclassethread.java" />
-      <change beforePath="$PROJECT_DIR$/src/window.java" afterPath="$PROJECT_DIR$/src/window.java" />
+      <change beforePath="$PROJECT_DIR$/src/drawable/arrow_turn_left.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/drawable/arrow_turn_right.png" afterPath="" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,13 +79,65 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="40" column="28" lean-forward="false" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#startup#0;class#Main#0" expanded="false" />
+                <element signature="method#rotateleft#0;class#Main#0" expanded="false" />
+                <element signature="method#rotateright#0;class#Main#0" expanded="false" />
+                <element signature="method#rotatereset#0;class#Main#0" expanded="false" />
+                <element signature="method#showoldschool#0;class#Main#0" expanded="false" />
+                <element signature="method#showrecentschool#0;class#Main#0" expanded="false" />
+                <element signature="method#showottohahn#0;class#Main#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#btn_old_school#0;class#Controller#0" expanded="false" />
+                <element signature="method#btn_recent_school#0;class#Controller#0" expanded="false" />
+                <element signature="method#btn_otto#0;class#Controller#0" expanded="false" />
+                <element signature="method#btn_rotate_reset#0;class#Controller#0" expanded="false" />
+                <element signature="method#btn_rotate_right#0;class#Controller#0" expanded="false" />
+                <element signature="method#btn_rotate_left#0;class#Controller#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller.fxml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="680">
+              <caret line="40" column="14" lean-forward="false" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaFXApplication" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -127,8 +182,9 @@
         <option value="$PROJECT_DIR$/src/Object.java" />
         <option value="$PROJECT_DIR$/src/window.java" />
         <option value="$PROJECT_DIR$/src/hilfclassethread.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Controller.form" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/Controller.fxml" />
         <option value="$PROJECT_DIR$/src/Controller.java" />
       </list>
     </option>
@@ -161,20 +217,28 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
           <expand>
             <path>
-              <item name="PSeminar_FX" type="58d84e3e:PackageViewProjectNode" />
-              <item name="PSeminar_FX" type="616d4139:PackageViewModuleNode" />
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="PSeminarProjekt" type="cbb8eebc:String" user="PSeminarProjekt" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="PSeminarProjekt" type="cbb8eebc:String" user="PSeminarProjekt" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="PSeminarProjekt" type="cbb8eebc:String" user="PSeminarProjekt" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="model" type="cbb8eebc:String" user="model" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -182,10 +246,45 @@
               <item name="PSeminarProjekt" type="b2602c69:ProjectViewProjectNode" />
               <item name="PSeminarProjekt" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="PSeminarProjekt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PSeminarProjekt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PSeminarProjekt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PSeminarProjekt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="drawable" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PSeminarProjekt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PSeminarProjekt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="PSeminarProjekt" type="58d84e3e:PackageViewProjectNode" />
+              <item name="PSeminar_FX" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="PSeminarProjekt" type="58d84e3e:PackageViewProjectNode" />
+              <item name="PSeminar_FX" type="616d4139:PackageViewModuleNode" />
+              <item name="model" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -212,6 +311,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Tobip\Desktop\Programmierung\PSeminarProjekt\model" />
       <recent name="C:\Users\Tobip\Desktop\PSeminarProjekt\model\old_school" />
       <recent name="C:\Users\Tobip\Desktop\PSeminar_FX\model" />
       <recent name="C:\Users\Tobip\Desktop\PSeminar_FX" />
@@ -223,6 +323,7 @@
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Tobip\Desktop\Programmierung\PSeminarProjekt\src\model" />
       <recent name="C:\Users\Tobip\Desktop\Programmierung\PSeminarProjekt\model\otto_hahn" />
       <recent name="C:\Users\Tobip\Desktop\Programmierung\PSeminarProjekt\res" />
       <recent name="C:\Users\Tobip\Desktop\PSeminar_FX\src" />
@@ -451,6 +552,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="22" width="1936" height="1066" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -465,7 +567,8 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867885" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16257995" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17004265" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -483,7 +586,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -531,7 +633,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="16" />
+      <option name="time" value="18" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -540,7 +642,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml" />
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java" />
@@ -549,11 +650,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
           <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <element signature="method#window#0;class#window#0" expanded="false" />
-            <element signature="method#rightrotation#0;class#window#0" expanded="false" />
-            <element signature="method#leftrotation#0;class#window#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -561,16 +657,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
           <caret line="57" column="98" lean-forward="false" selection-start-line="57" selection-start-column="98" selection-end-line="57" selection-end-column="98" />
-          <folding>
-            <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="method#startup#0;class#Main#0" expanded="false" />
-            <element signature="method#rotateleft#0;class#Main#0" expanded="false" />
-            <element signature="method#rotateright#0;class#Main#0" expanded="false" />
-            <element signature="method#rotatereset#0;class#Main#0" expanded="false" />
-            <element signature="method#showoldschool#0;class#Main#0" expanded="false" />
-            <element signature="method#showrecentschool#0;class#Main#0" expanded="false" />
-            <element signature="method#showottohahn#0;class#Main#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -579,16 +665,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="34" column="37" lean-forward="false" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="37" />
-          <folding>
-            <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="method#startup#0;class#Main#0" expanded="false" />
-            <element signature="method#rotateleft#0;class#Main#0" expanded="false" />
-            <element signature="method#rotateright#0;class#Main#0" expanded="false" />
-            <element signature="method#rotatereset#0;class#Main#0" expanded="false" />
-            <element signature="method#showoldschool#0;class#Main#0" expanded="false" />
-            <element signature="method#showrecentschool#0;class#Main#0" expanded="false" />
-            <element signature="method#showottohahn#0;class#Main#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -596,21 +672,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="30" column="31" lean-forward="false" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
-          <folding>
-            <element signature="method#loadObject#0;class#Objectback#0" expanded="false" />
-            <element signature="method#Objectback#0;class#Objectback#0" expanded="false" />
-            <element signature="method#createSceneGraph#0;class#Objectback#0" expanded="false" />
-            <element signature="method#createObject#0;class#Objectback#0" expanded="false" />
-            <element signature="method#createLight#0;class#Objectback#0" expanded="false" />
-            <element signature="method#createSceneGraphrecent#0;class#Objectback#0" expanded="false" />
-            <element signature="method#createObjectrecent#0;class#Objectback#0" expanded="false" />
-            <element signature="method#createLightrecent#0;class#Objectback#0" expanded="false" />
-            <element signature="method#createSceneGraphotto#0;class#Objectback#0" expanded="false" />
-            <element signature="method#createObjectotto#0;class#Objectback#0" expanded="false" />
-            <element signature="method#createLightotto#0;class#Objectback#0" expanded="false" />
-            <element signature="method#turnright#0;class#Objectback#0" expanded="false" />
-            <element signature="method#turnleft#0;class#Objectback#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -618,22 +679,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1479">
           <caret line="99" column="49" lean-forward="false" selection-start-line="99" selection-start-column="49" selection-end-line="99" selection-end-column="49" />
-          <folding>
-            <element signature="method#loadObject#0;class#Object#0" expanded="false" />
-            <element signature="method#Object#0;class#Object#0" expanded="false" />
-            <element signature="method#createSceneGraph#0;class#Object#0" expanded="false" />
-            <element signature="method#createObject#0;class#Object#0" expanded="false" />
-            <element signature="method#createLight#0;class#Object#0" expanded="false" />
-            <element signature="method#createSceneGraphrecent#0;class#Object#0" expanded="false" />
-            <element signature="method#createObjectrecent#0;class#Object#0" expanded="false" />
-            <element signature="method#createLightrecent#0;class#Object#0" expanded="false" />
-            <element signature="method#createSceneGraphotto#0;class#Object#0" expanded="false" />
-            <element signature="method#createObjectotto#0;class#Object#0" expanded="false" />
-            <element signature="method#createLightotto#0;class#Object#0" expanded="false" />
-            <element signature="method#turnright#0;class#Object#0" expanded="false" />
-            <element signature="method#turnleft#0;class#Object#0" expanded="false" />
-            <element signature="method#runturnleft#0;class#Object#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -641,22 +686,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="25" column="53" lean-forward="false" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
-          <folding>
-            <element signature="method#loadObject#0;class#Objectleft#0" expanded="false" />
-            <element signature="method#Objectleft#0;class#Objectleft#0" expanded="false" />
-            <element signature="method#createSceneGraph#0;class#Objectleft#0" expanded="false" />
-            <element signature="method#createObject#0;class#Objectleft#0" expanded="false" />
-            <element signature="method#createLight#0;class#Objectleft#0" expanded="false" />
-            <element signature="method#createSceneGraphrecent#0;class#Objectleft#0" expanded="false" />
-            <element signature="method#createObjectrecent#0;class#Objectleft#0" expanded="false" />
-            <element signature="method#createLightrecent#0;class#Objectleft#0" expanded="false" />
-            <element signature="method#createSceneGraphotto#0;class#Objectleft#0" expanded="false" />
-            <element signature="method#createObjectotto#0;class#Objectleft#0" expanded="false" />
-            <element signature="method#createLightotto#0;class#Objectleft#0" expanded="false" />
-            <element signature="method#turnright#0;class#Objectleft#0" expanded="false" />
-            <element signature="method#turnleft#0;class#Objectleft#0" expanded="false" />
-            <element signature="method#runturnleft#0;class#Objectleft#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -664,22 +693,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding>
-            <element signature="method#loadObject#0;class#Objectright#0" expanded="false" />
-            <element signature="method#Objectright#0;class#Objectright#0" expanded="false" />
-            <element signature="method#createSceneGraph#0;class#Objectright#0" expanded="false" />
-            <element signature="method#createObject#0;class#Objectright#0" expanded="false" />
-            <element signature="method#createLight#0;class#Objectright#0" expanded="false" />
-            <element signature="method#createSceneGraphrecent#0;class#Objectright#0" expanded="false" />
-            <element signature="method#createObjectrecent#0;class#Objectright#0" expanded="false" />
-            <element signature="method#createLightrecent#0;class#Objectright#0" expanded="false" />
-            <element signature="method#createSceneGraphotto#0;class#Objectright#0" expanded="false" />
-            <element signature="method#createObjectotto#0;class#Objectright#0" expanded="false" />
-            <element signature="method#createLightotto#0;class#Objectright#0" expanded="false" />
-            <element signature="method#turnright#0;class#Objectright#0" expanded="false" />
-            <element signature="method#turnleft#0;class#Objectright#0" expanded="false" />
-            <element signature="method#runturnright#0;class#Objectright#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -687,11 +700,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
-          <folding>
-            <element signature="method#window#0;class#window#0" expanded="false" />
-            <element signature="method#rightrotation#0;class#window#0" expanded="false" />
-            <element signature="method#leftrotation#0;class#window#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -699,16 +707,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="method#startup#0;class#Main#0" expanded="false" />
-            <element signature="method#rotateleft#0;class#Main#0" expanded="false" />
-            <element signature="method#rotateright#0;class#Main#0" expanded="false" />
-            <element signature="method#rotatereset#0;class#Main#0" expanded="false" />
-            <element signature="method#showoldschool#0;class#Main#0" expanded="false" />
-            <element signature="method#showrecentschool#0;class#Main#0" expanded="false" />
-            <element signature="method#showottohahn#0;class#Main#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -716,22 +714,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3791">
           <caret line="235" column="5" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="235" selection-end-column="5" />
-          <folding>
-            <element signature="method#loadObject#0;class#Object#0" expanded="false" />
-            <element signature="method#Object#0;class#Object#0" expanded="false" />
-            <element signature="method#createSceneGraph#0;class#Object#0" expanded="false" />
-            <element signature="method#createObject#0;class#Object#0" expanded="false" />
-            <element signature="method#createLight#0;class#Object#0" expanded="false" />
-            <element signature="method#createSceneGraphrecent#0;class#Object#0" expanded="false" />
-            <element signature="method#createObjectrecent#0;class#Object#0" expanded="false" />
-            <element signature="method#createLightrecent#0;class#Object#0" expanded="false" />
-            <element signature="method#createSceneGraphotto#0;class#Object#0" expanded="false" />
-            <element signature="method#createObjectotto#0;class#Object#0" expanded="false" />
-            <element signature="method#createLightotto#0;class#Object#0" expanded="false" />
-            <element signature="method#turnright#0;class#Object#0" expanded="false" />
-            <element signature="method#turnleft#0;class#Object#0" expanded="false" />
-            <element signature="method#runturnleft#0;class#Object#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -739,11 +721,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1275">
           <caret line="75" column="4" lean-forward="false" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="4" />
-          <folding>
-            <element signature="method#window#0;class#window#0" expanded="false" />
-            <element signature="method#rightrotation#0;class#window#0" expanded="false" />
-            <element signature="method#leftrotation#0;class#window#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -751,16 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-          <folding>
-            <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="method#startup#0;class#Main#0" expanded="false" />
-            <element signature="method#rotateleft#0;class#Main#0" expanded="false" />
-            <element signature="method#rotateright#0;class#Main#0" expanded="false" />
-            <element signature="method#rotatereset#0;class#Main#0" expanded="false" />
-            <element signature="method#showoldschool#0;class#Main#0" expanded="false" />
-            <element signature="method#showrecentschool#0;class#Main#0" expanded="false" />
-            <element signature="method#showottohahn#0;class#Main#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -768,11 +735,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="850">
           <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <element signature="method#window#0;class#window#0" expanded="false" />
-            <element signature="method#rightrotation#0;class#window#0" expanded="false" />
-            <element signature="method#leftrotation#0;class#window#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -780,22 +742,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1921">
           <caret line="125" column="0" lean-forward="false" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
-          <folding>
-            <element signature="method#loadObject#0;class#Object#0" expanded="false" />
-            <element signature="method#Object#0;class#Object#0" expanded="false" />
-            <element signature="method#createSceneGraph#0;class#Object#0" expanded="false" />
-            <element signature="method#createObject#0;class#Object#0" expanded="false" />
-            <element signature="method#createLight#0;class#Object#0" expanded="false" />
-            <element signature="method#createSceneGraphrecent#0;class#Object#0" expanded="false" />
-            <element signature="method#createObjectrecent#0;class#Object#0" expanded="false" />
-            <element signature="method#createLightrecent#0;class#Object#0" expanded="false" />
-            <element signature="method#createSceneGraphotto#0;class#Object#0" expanded="false" />
-            <element signature="method#createObjectotto#0;class#Object#0" expanded="false" />
-            <element signature="method#createLightotto#0;class#Object#0" expanded="false" />
-            <element signature="method#turnright#0;class#Object#0" expanded="false" />
-            <element signature="method#turnleft#0;class#Object#0" expanded="false" />
-            <element signature="method#runturnleft#0;class#Object#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -803,16 +749,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="867">
           <caret line="57" column="48" lean-forward="false" selection-start-line="57" selection-start-column="48" selection-end-line="57" selection-end-column="48" />
-          <folding>
-            <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="method#startup#0;class#Main#0" expanded="false" />
-            <element signature="method#rotateleft#0;class#Main#0" expanded="false" />
-            <element signature="method#rotateright#0;class#Main#0" expanded="false" />
-            <element signature="method#rotatereset#0;class#Main#0" expanded="false" />
-            <element signature="method#showoldschool#0;class#Main#0" expanded="false" />
-            <element signature="method#showrecentschool#0;class#Main#0" expanded="false" />
-            <element signature="method#showottohahn#0;class#Main#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -820,11 +756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
           <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <element signature="method#window#0;class#window#0" expanded="false" />
-            <element signature="method#rightrotation#0;class#window#0" expanded="false" />
-            <element signature="method#leftrotation#0;class#window#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -832,22 +763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="19" />
-          <folding>
-            <element signature="method#loadObject#0;class#Object#0" expanded="false" />
-            <element signature="method#Object#0;class#Object#0" expanded="false" />
-            <element signature="method#createSceneGraph#0;class#Object#0" expanded="false" />
-            <element signature="method#createObject#0;class#Object#0" expanded="false" />
-            <element signature="method#createLight#0;class#Object#0" expanded="false" />
-            <element signature="method#createSceneGraphrecent#0;class#Object#0" expanded="false" />
-            <element signature="method#createObjectrecent#0;class#Object#0" expanded="false" />
-            <element signature="method#createLightrecent#0;class#Object#0" expanded="false" />
-            <element signature="method#createSceneGraphotto#0;class#Object#0" expanded="false" />
-            <element signature="method#createObjectotto#0;class#Object#0" expanded="false" />
-            <element signature="method#createLightotto#0;class#Object#0" expanded="false" />
-            <element signature="method#turnright#0;class#Object#0" expanded="false" />
-            <element signature="method#turnleft#0;class#Object#0" expanded="false" />
-            <element signature="method#runturnleft#0;class#Object#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -855,16 +770,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
           <caret line="44" column="17" lean-forward="false" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
-          <folding>
-            <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="method#startup#0;class#Main#0" expanded="false" />
-            <element signature="method#rotateleft#0;class#Main#0" expanded="false" />
-            <element signature="method#rotateright#0;class#Main#0" expanded="false" />
-            <element signature="method#rotatereset#0;class#Main#0" expanded="false" />
-            <element signature="method#showoldschool#0;class#Main#0" expanded="false" />
-            <element signature="method#showrecentschool#0;class#Main#0" expanded="false" />
-            <element signature="method#showottohahn#0;class#Main#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -872,11 +777,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
           <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <element signature="method#window#0;class#window#0" expanded="false" />
-            <element signature="method#rightrotation#0;class#window#0" expanded="false" />
-            <element signature="method#leftrotation#0;class#window#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -884,22 +784,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="method#loadObject#0;class#Object#0" expanded="false" />
-            <element signature="method#Object#0;class#Object#0" expanded="false" />
-            <element signature="method#createSceneGraph#0;class#Object#0" expanded="false" />
-            <element signature="method#createObject#0;class#Object#0" expanded="false" />
-            <element signature="method#createLight#0;class#Object#0" expanded="false" />
-            <element signature="method#createSceneGraphrecent#0;class#Object#0" expanded="false" />
-            <element signature="method#createObjectrecent#0;class#Object#0" expanded="false" />
-            <element signature="method#createLightrecent#0;class#Object#0" expanded="false" />
-            <element signature="method#createSceneGraphotto#0;class#Object#0" expanded="false" />
-            <element signature="method#createObjectotto#0;class#Object#0" expanded="false" />
-            <element signature="method#createLightotto#0;class#Object#0" expanded="false" />
-            <element signature="method#turnright#0;class#Object#0" expanded="false" />
-            <element signature="method#turnleft#0;class#Object#0" expanded="false" />
-            <element signature="method#runturnleft#0;class#Object#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -958,7 +842,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -966,22 +849,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
           <caret line="367" column="63" lean-forward="false" selection-start-line="367" selection-start-column="63" selection-end-line="367" selection-end-column="63" />
-          <folding>
-            <element signature="method#loadObject#0;class#Objectleft#0" expanded="false" />
-            <element signature="method#Objectleft#0;class#Objectleft#0" expanded="false" />
-            <element signature="method#createSceneGraph#0;class#Objectleft#0" expanded="false" />
-            <element signature="method#createObject#0;class#Objectleft#0" expanded="false" />
-            <element signature="method#createLight#0;class#Objectleft#0" expanded="false" />
-            <element signature="method#createSceneGraphrecent#0;class#Objectleft#0" expanded="false" />
-            <element signature="method#createObjectrecent#0;class#Objectleft#0" expanded="false" />
-            <element signature="method#createLightrecent#0;class#Objectleft#0" expanded="false" />
-            <element signature="method#createSceneGraphotto#0;class#Objectleft#0" expanded="false" />
-            <element signature="method#createObjectotto#0;class#Objectleft#0" expanded="false" />
-            <element signature="method#createLightotto#0;class#Objectleft#0" expanded="false" />
-            <element signature="method#turnright#0;class#Objectleft#0" expanded="false" />
-            <element signature="method#turnleft#0;class#Objectleft#0" expanded="false" />
-            <element signature="method#runturnleft#0;class#Objectleft#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -989,21 +856,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="18" column="112" lean-forward="false" selection-start-line="18" selection-start-column="112" selection-end-line="18" selection-end-column="112" />
-          <folding>
-            <element signature="method#loadObject#0;class#Objectback#0" expanded="false" />
-            <element signature="method#Objectback#0;class#Objectback#0" expanded="false" />
-            <element signature="method#createSceneGraph#0;class#Objectback#0" expanded="false" />
-            <element signature="method#createObject#0;class#Objectback#0" expanded="false" />
-            <element signature="method#createLight#0;class#Objectback#0" expanded="false" />
-            <element signature="method#createSceneGraphrecent#0;class#Objectback#0" expanded="false" />
-            <element signature="method#createObjectrecent#0;class#Objectback#0" expanded="false" />
-            <element signature="method#createLightrecent#0;class#Objectback#0" expanded="false" />
-            <element signature="method#createSceneGraphotto#0;class#Objectback#0" expanded="false" />
-            <element signature="method#createObjectotto#0;class#Objectback#0" expanded="false" />
-            <element signature="method#createLightotto#0;class#Objectback#0" expanded="false" />
-            <element signature="method#turnright#0;class#Objectback#0" expanded="false" />
-            <element signature="method#turnleft#0;class#Objectback#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1011,22 +863,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="20" column="39" lean-forward="true" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
-          <folding>
-            <element signature="method#loadObject#0;class#Object#0" expanded="false" />
-            <element signature="method#Object#0;class#Object#0" expanded="false" />
-            <element signature="method#createSceneGraph#0;class#Object#0" expanded="false" />
-            <element signature="method#createObject#0;class#Object#0" expanded="false" />
-            <element signature="method#createLight#0;class#Object#0" expanded="false" />
-            <element signature="method#createSceneGraphrecent#0;class#Object#0" expanded="false" />
-            <element signature="method#createObjectrecent#0;class#Object#0" expanded="false" />
-            <element signature="method#createLightrecent#0;class#Object#0" expanded="false" />
-            <element signature="method#createSceneGraphotto#0;class#Object#0" expanded="false" />
-            <element signature="method#createObjectotto#0;class#Object#0" expanded="false" />
-            <element signature="method#createLightotto#0;class#Object#0" expanded="false" />
-            <element signature="method#turnright#0;class#Object#0" expanded="false" />
-            <element signature="method#turnleft#0;class#Object#0" expanded="false" />
-            <element signature="method#runturnleft#0;class#Object#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1034,11 +870,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding>
-            <element signature="method#window#0;class#window#0" expanded="false" />
-            <element signature="method#rightrotation#0;class#window#0" expanded="false" />
-            <element signature="method#leftrotation#0;class#window#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1046,19 +877,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <element signature="method#hilfclassethread#0;class#hilfclassethread#0" expanded="false" />
-            <element signature="method#run#0;class#hilfclassethread#0" expanded="false" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller.form" />
+    <entry file="file://$PROJECT_DIR$/src/Objectright.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="22" column="45" lean-forward="true" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="159" column="0" lean-forward="true" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
+        <state relative-caret-position="441">
+          <caret line="40" column="28" lean-forward="false" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
           <folding>
-            <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="method#startup#0;class#Main#0" expanded="false" />
             <element signature="method#rotateleft#0;class#Main#0" expanded="false" />
             <element signature="method#rotateright#0;class#Main#0" expanded="false" />
@@ -1070,40 +905,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller.form">
-      <provider selected="true" editor-type-id="ui-designer">
+    <entry file="file://$PROJECT_DIR$/src/Controller.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="14" lean-forward="false" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="30" column="45" lean-forward="false" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+        <state relative-caret-position="85">
+          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
           <folding>
-            <element signature="method#Controller#0;class#Controller#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Objectright.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="22" column="45" lean-forward="true" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
-          <folding>
-            <element signature="method#loadObject#0;class#Objectright#0" expanded="false" />
-            <element signature="method#Objectright#0;class#Objectright#0" expanded="false" />
-            <element signature="method#createSceneGraph#0;class#Objectright#0" expanded="false" />
-            <element signature="method#createObject#0;class#Objectright#0" expanded="false" />
-            <element signature="method#createLight#0;class#Objectright#0" expanded="false" />
-            <element signature="method#createSceneGraphrecent#0;class#Objectright#0" expanded="false" />
-            <element signature="method#createObjectrecent#0;class#Objectright#0" expanded="false" />
-            <element signature="method#createLightrecent#0;class#Objectright#0" expanded="false" />
-            <element signature="method#createSceneGraphotto#0;class#Objectright#0" expanded="false" />
-            <element signature="method#createObjectotto#0;class#Objectright#0" expanded="false" />
-            <element signature="method#createLightotto#0;class#Objectright#0" expanded="false" />
-            <element signature="method#turnright#0;class#Objectright#0" expanded="false" />
-            <element signature="method#turnleft#0;class#Objectright#0" expanded="false" />
-            <element signature="method#runturnright#0;class#Objectright#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#btn_old_school#0;class#Controller#0" expanded="false" />
+            <element signature="method#btn_recent_school#0;class#Controller#0" expanded="false" />
+            <element signature="method#btn_otto#0;class#Controller#0" expanded="false" />
+            <element signature="method#btn_rotate_reset#0;class#Controller#0" expanded="false" />
+            <element signature="method#btn_rotate_right#0;class#Controller#0" expanded="false" />
+            <element signature="method#btn_rotate_left#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>

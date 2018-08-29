@@ -1,18 +1,24 @@
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
+import javafx.stage.Stage;
 import java.awt.*;
 
-public class Main {
+public class Main extends Application {
 
     private static int Rotation = 0;
-    static Controller mycontroller;
     static String old_school_path = "model/old_school/ladybird2_w.obj";
     static String recent_school_path = "model/recent_school/recent_school_w.obj";
     static String otto_hahn_path = "model/otto_hahn/IronMan.obj";
 
-    public static void main (String[] args){
+    public static void main(String[] args) {
 
-        mycontroller = new Controller();
+        launch(args);
 
-    } //Erzeugt den Controller
+    }
 
     //Startup
     public static void startup() {
@@ -20,6 +26,23 @@ public class Main {
         new window();
 
     } //Startet automatisch alle Fenster, die das alte Schulgebäude anzeigen
+
+
+    @Override
+    public void start(Stage primaryStage) throws Exception{
+
+        startup();
+        FXMLLoader loader = new FXMLLoader(Main.class.getResource("Controller.fxml"));
+        AnchorPane root = loader.load();
+        Scene scene = new Scene(root);
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Hologramm_Steuerung");
+        Controller temp = loader.getController();
+        temp.btn_old_school.setFont(Font.font("Verdana", FontWeight.BOLD, 10));
+        primaryStage.show();
+
+    }
+
 
     //Actions;
     public static void rotateleft() {
