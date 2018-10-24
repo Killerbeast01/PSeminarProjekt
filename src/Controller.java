@@ -14,9 +14,6 @@ public class Controller{
     @FXML
     void btn_old_school() {
 
-        btn_old_school.setFont(Font.font("Verdana", FontWeight.BOLD, 10));
-        btn_otto.setFont(null);
-        btn_recent_school.setFont(null);
         Main.showoldschool();
 
     }
@@ -24,9 +21,6 @@ public class Controller{
     @FXML
     void btn_recent_school() {
 
-        btn_recent_school.setFont(Font.font("Verdana", FontWeight.BOLD, 10));
-        btn_otto.setFont(null);
-        btn_old_school.setFont(null);
         Main.showrecentschool();
 
     }
@@ -34,9 +28,6 @@ public class Controller{
     @FXML
     void btn_otto() {
 
-        btn_otto.setFont(Font.font("Verdana", FontWeight.BOLD, 10));
-        btn_old_school.setFont(null);
-        btn_recent_school.setFont(null);
         Main.showottohahn();
 
     }

@@ -2,8 +2,6 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import java.awt.*;
 
@@ -37,8 +35,6 @@ public class Main extends Application {
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Hologramm_Steuerung");
-        Controller temp = loader.getController();
-        temp.btn_old_school.setFont(Font.font("Verdana", FontWeight.BOLD, 10));
         primaryStage.show();
 
     }

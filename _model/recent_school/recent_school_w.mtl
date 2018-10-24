@@ -1,0 +1,86 @@
+# Exported from Wings 3D 2.1.5
+newmtl T_alu
+Ns 90.0
+d 1.0
+illum 2
+Kd 0.64 0.545926 0.562994
+Ka 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ke 0.0 0.0 0.0
+
+newmtl T_bottle
+Ns 90.0
+d 1.0
+illum 2
+Kd 0.64 0.64 0.64
+Ka 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ke 0.0 0.0 0.0
+map_Kd extinguisher_map.png
+
+newmtl T_bottle2
+Ns 90.0
+d 1.0
+illum 2
+Kd 0.64 0.64 0.64
+Ka 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ke 0.0 0.0 0.0
+map_Kd extinguisher_map.png
+
+newmtl T_bottle3
+Ns 90.0
+d 1.0
+illum 2
+Kd 0.64 0.64 0.64
+Ka 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ke 0.0 0.0 0.0
+map_Kd extinguisher_map.png
+
+newmtl T_copper
+Ns 90.0
+d 1.0
+illum 2
+Kd 0.64 0.64 0.64
+Ka 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ke 0.0 0.0 0.0
+
+newmtl T_plastic
+Ns 90.0
+d 1.0
+illum 2
+Kd 0.64 0.64 0.64
+Ka 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ke 0.0 0.0 0.0
+
+newmtl T_plasticblue
+Ns 90.0
+d 1.0
+illum 2
+Kd 0.64 0.64 0.64
+Ka 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ke 0.0 0.0 0.0
+
+newmtl T_rubber
+Ns 90.0
+d 1.0
+illum 2
+Kd 0.64 0.64 0.64
+Ka 1.0 1.0 1.0
+Ks 0.5 0.5 0.5
+Ke 0.0 0.0 0.0
+map_Kd avent_extincteur.jpg
+
+newmtl default
+Ns 0.0
+d 1.0
+illum 2
+Kd 0.7898538076923077 0.8133333333333334 0.6940444444444445
+Ka 0.7898538076923077 0.8133333333333334 0.6940444444444445
+Ks 0.0 0.0 0.0
+Ke 0.0 0.0 0.0
+

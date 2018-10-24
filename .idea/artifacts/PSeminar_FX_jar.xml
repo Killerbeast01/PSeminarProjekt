@@ -13,6 +13,7 @@
       <element id="library" level="project" name="javax" />
       <element id="library" level="project" name="jimModelBrowserJFX-0_4_1" />
       <element id="library" level="project" name="vecmath" />
+      <element id="library" level="application" name="jfxrt" />
     </root>
   </artifact>
 </component>
