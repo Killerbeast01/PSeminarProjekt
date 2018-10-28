@@ -19,7 +19,7 @@ public class Main extends Application {
     }
 
     //Startup
-    public static void startup() {
+    private static void startup() {
 
         new window();
 
@@ -41,7 +41,7 @@ public class Main extends Application {
 
 
     //Actions;
-    public static void rotateleft() {
+    static void rotateleft() {
             Rotation += 1;
             System.out.print("Rotation um 1 erhöht --> ");
             System.out.println(Rotation);
@@ -49,7 +49,7 @@ public class Main extends Application {
 
         } //Sorgt für die Rotation aller Objekte nach links
 
-    public static void rotateright() {
+    static void rotateright() {
             Rotation -= 1;
             System.out.print("Rotation um 1 verkleinert --> ");
             System.out.println(Rotation);
@@ -57,7 +57,7 @@ public class Main extends Application {
 
         } //Sorgt für die Rotation aller Objekte nach rechts
 
-    public static void rotatereset() {
+    static void rotatereset() {
 
 
         if (Rotation != 0) {
@@ -82,7 +82,7 @@ public class Main extends Application {
     } //Resettet die Rotation aller Objekte
 
     //Windows;
-    public static void showoldschool() {
+    static void showoldschool() {
 
     Object.applet_old.setVisible(true);
     Object.applet_otto.setVisible(false);
@@ -102,7 +102,7 @@ public class Main extends Application {
 
     } //Zeigt in allen Fenstern das alte Schulgebäude an
 
-    public static void showrecentschool() {
+    static void showrecentschool() {
 
         Object.applet_old.setVisible(false);
         Object.applet_otto.setVisible(false);
@@ -138,7 +138,7 @@ public class Main extends Application {
 
     } //Zeigt in allen Fenstern das aktuelle Schulgebäude an
 
-    public static void showottohahn() {
+    static void showottohahn() {
 
         Object.applet_old.setVisible(false);
         Object.applet_otto.setVisible(true);

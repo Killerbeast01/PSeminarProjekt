@@ -1,7 +1,5 @@
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
 
 public class Controller{
 

@@ -10,6 +10,7 @@ import com.sun.j3d.loaders.Scene;
 import com.sun.j3d.loaders.objectfile.ObjectFile;
 import java.io.*;
 
+@SuppressWarnings("deprecation")
 public class Object extends JApplet {
 
     private SimpleUniverse universe, universerecent, universeotto;
@@ -17,12 +18,12 @@ public class Object extends JApplet {
     private static Transform3D t3d = null, t3drecent = null, t3dotto = null;
     private static Transform3D t3dstep = new Transform3D(), t3dsteprecent = new Transform3D(), t3dstepotto = new Transform3D();
     private static Matrix4d matrix = new Matrix4d(), matrixrecent = new Matrix4d(), matrixotto = new Matrix4d();
-    protected static Frame frame;
-    protected static Object applet_old;
-    protected static Object applet_recent;
-    protected static Object applet_otto;
+    static Frame frame;
+    static Object applet_old;
+    static Object applet_recent;
+    static Object applet_otto;
 
-    public static void loadObject() {
+    static void loadObject() {
 
         System.out.println("load applet for obj front");
         applet_old = new Object(1,Main.old_school_path);
@@ -50,7 +51,7 @@ public class Object extends JApplet {
 
     }
 
-    public Object(int i ,String objectpath) {
+    private Object(int i ,String objectpath) {
 
         switch (i) {
             case (1):
@@ -367,7 +368,7 @@ public class Object extends JApplet {
 
     //---------------------------------------------------------
 
-    public static void turnright() {
+    static void turnright() {
 
         t3dstep.rotY(-0.313);
         tg.getTransform(t3d);
@@ -393,9 +394,9 @@ public class Object extends JApplet {
         t3dotto.setTranslation(new Vector3d(matrixotto.m03, matrixotto.m13, matrixotto.m23));
         tgotto.setTransform(t3dotto);
 
-    }
+    } //Dreht das angezeigte Objekt nach rechts
 
-    public static void turnleft() {
+    static void turnleft() {
 
         t3dstep.rotY(0.313);
         tg.getTransform(t3d);
@@ -421,7 +422,7 @@ public class Object extends JApplet {
         t3dotto.setTranslation(new Vector3d(matrixotto.m03, matrixotto.m13, matrixotto.m23));
         tgotto.setTransform(t3dotto);
 
-    }
+    } //Dreht das angezeigte Objekt nach links
 
     private static void runturnleft() {
 
@@ -430,5 +431,5 @@ public class Object extends JApplet {
             turnleft();
 
         }
-    }
+    } //Dreht das angezeigte Objekt nach links am anfang, um es richtig auszurichten
 }

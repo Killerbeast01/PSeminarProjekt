@@ -10,6 +10,7 @@ import com.sun.j3d.loaders.Scene;
 import com.sun.j3d.loaders.objectfile.ObjectFile;
 import java.io.*;
 
+@SuppressWarnings("deprecation")
 public class Objectback extends JApplet {
 
     private SimpleUniverse universe, universerecent, universeotto;
@@ -17,12 +18,12 @@ public class Objectback extends JApplet {
     private static Transform3D t3d = null, t3drecent = null, t3dotto = null;
     private static Transform3D t3dstep = new Transform3D(), t3dsteprecent = new Transform3D(), t3dstepotto = new Transform3D();
     private static Matrix4d matrix = new Matrix4d(), matrixrecent = new Matrix4d(), matrixotto = new Matrix4d();
-    protected static Frame frame;
-    protected static Objectback applet_old;
-    protected static Objectback applet_recent;
-    protected static Objectback applet_otto;
+    static Frame frame;
+    static Objectback applet_old;
+    static Objectback applet_recent;
+    static Objectback applet_otto;
 
-    public static void loadObject() {
+    static void loadObject() {
 
         System.out.println("load applet for obj front");
         applet_old = new Objectback(1,Main.old_school_path);
@@ -42,7 +43,7 @@ public class Objectback extends JApplet {
 
     }
 
-    public Objectback(int i ,String objectpath) {
+    private Objectback(int i ,String objectpath) {
 
         switch (i) {
             case (1):
