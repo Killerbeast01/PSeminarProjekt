@@ -25,14 +25,16 @@ public class Object extends JApplet {
 
     static void loadObject() {
 
-        System.out.println("load applet for obj front");
+        Main.lg.info("Erzeuge Fenster;");
+        Main.lg.info("Erzeuge applet_old;");
         applet_old = new Object(1,Main.old_school_path);
         applet_old.setName("old");
+        Main.lg.info("Erzeuge applet_recent;");
         applet_recent = new Object(2, Main.recent_school_path);
         applet_recent.setName("recent");
+        Main.lg.info("Erzeuge applet_otto;");
         applet_otto = new Object(3, Main.otto_hahn_path);
         applet_otto.setName("otto");
-        System.out.println("loaded applet for obj front");
 
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         frame = new MainFrame(applet_old, screenSize.width / 2, screenSize.height / 2);
@@ -40,12 +42,9 @@ public class Object extends JApplet {
 
         frame.setBackground(Color.GRAY);
         frame.setSize(screenSize.width / 2, screenSize.height / 2);
-        System.out.println("load frame for obj front");
         frame.setVisible(true);
         frame.setTitle("front");
-
-
-        System.out.println("loaded frame for obj front");
+        Main.lg.info("Fenster erzeugt;");
         runturnleft();
 
     }
@@ -54,7 +53,7 @@ public class Object extends JApplet {
 
         switch (i) {
             case (1):
-                System.out.println("load object old");
+
 
                 setLayout(new BorderLayout());
                 GraphicsConfiguration config = SimpleUniverse.getPreferredConfiguration();
@@ -64,19 +63,19 @@ public class Object extends JApplet {
 
                 universe = new SimpleUniverse(canvas);
 
-                System.out.println("create ScenceGraph");
+
                 BranchGroup scene = createSceneGraph(objectpath);
-                System.out.println("createdSenceGraph");
+
 
                 universe.getViewingPlatform().setNominalViewingTransform();
                 universe.getViewer().getView().setBackClipDistance(100.0);
                 universe.addBranchGraph(scene);
 
-                System.out.println("loaded object");
+
                 break;
 
             case (2):
-                System.out.println("load object recent");
+
 
                 setLayout(new BorderLayout());
                 GraphicsConfiguration configrecent = SimpleUniverse.getPreferredConfiguration();
@@ -86,19 +85,14 @@ public class Object extends JApplet {
 
                 universerecent = new SimpleUniverse(canvasrecent);
 
-                System.out.println("create ScenceGraph");
                 BranchGroup scenerecent = createSceneGraphrecent(objectpath);
-                System.out.println("createdSenceGraph");
 
                 universerecent.getViewingPlatform().setNominalViewingTransform();
                 universerecent.getViewer().getView().setBackClipDistance(100.0);
                 universerecent.addBranchGraph(scenerecent);
-
-                System.out.println("loaded object");
                 break;
 
             case (3):
-                System.out.println("load object otto");
 
                 setLayout(new BorderLayout());
                 GraphicsConfiguration configotto = SimpleUniverse.getPreferredConfiguration();
@@ -108,15 +102,11 @@ public class Object extends JApplet {
 
                 universeotto = new SimpleUniverse(canvasotto);
 
-                System.out.println("create ScenceGraph");
                 BranchGroup sceneotto = createSceneGraphotto(objectpath);
-                System.out.println("createdSenceGraph");
 
                 universeotto.getViewingPlatform().setNominalViewingTransform();
                 universeotto.getViewer().getView().setBackClipDistance(100.0);
                 universeotto.addBranchGraph(sceneotto);
-
-                System.out.println("loaded object");
                 break;
 
         }
@@ -139,10 +129,7 @@ public class Object extends JApplet {
         platformGeom.addChild(keyNavBeh);
 
         universe.getViewingPlatform().setPlatformGeometry(platformGeom);
-
-        System.out.println("create Object");
         objRoot.addChild(createObject(objectpath));
-        System.out.println("created Object");
 
         Background background = new Background();
         background.setColor(0.5f, 0.5f, 0.5f);
@@ -169,8 +156,6 @@ public class Object extends JApplet {
 
         ObjectFile loader = new ObjectFile(ObjectFile.RESIZE);
         Scene s = null;
-        System.out.print("used filepath:");
-        System.out.println(objectpath);
         File file = new File(objectpath);
 
         try {
@@ -221,9 +206,7 @@ public class Object extends JApplet {
 
         universerecent.getViewingPlatform().setPlatformGeometry(platformGeom);
 
-        System.out.println("create Object");
         objRoot.addChild(createObjectrecent(objectpath));
-        System.out.println("created Object");
 
         Background background = new Background();
         background.setColor(0.5f, 0.5f, 0.5f);
@@ -250,8 +233,6 @@ public class Object extends JApplet {
 
         ObjectFile loader = new ObjectFile(ObjectFile.RESIZE);
         Scene s = null;
-        System.out.print("used filepath:");
-        System.out.println(objectpath);
         File file = new File(objectpath);
 
         try {
@@ -302,9 +283,7 @@ public class Object extends JApplet {
 
         universeotto.getViewingPlatform().setPlatformGeometry(platformGeom);
 
-        System.out.println("create Object");
         objRoot.addChild(createObjectotto(objectpath));
-        System.out.println("created Object");
 
         Background background = new Background();
         background.setColor(0.5f, 0.5f, 0.5f);
@@ -331,8 +310,6 @@ public class Object extends JApplet {
 
         ObjectFile loader = new ObjectFile(ObjectFile.RESIZE);
         Scene s = null;
-        System.out.print("used filepath:");
-        System.out.println(objectpath);
         File file = new File(objectpath);
 
         try {

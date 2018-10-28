@@ -1,7 +1,7 @@
 class window {
 
     window() {
-
+        Main.lg.info("Starte Threads für Fenster;");
             Thread obj1 = new Thread(new hilfclassethread(1));
             Thread obj2 = new Thread(new hilfclassethread(2));
             Thread obj3 = new Thread(new hilfclassethread(3));
@@ -10,7 +10,7 @@ class window {
             obj2.start();
             obj3.start();
             obj4.start();
-
+        Main.lg.info("Threads für Fenster gestartet;");
     } //Startet die Fenster in Threads, damit es nicht so lange dauert
 
     //Rotation;

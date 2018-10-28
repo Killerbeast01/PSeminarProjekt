@@ -4,6 +4,10 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import java.awt.*;
+import java.io.IOException;
+import java.util.logging.FileHandler;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 public class Main extends Application {
 
@@ -11,6 +15,7 @@ public class Main extends Application {
     static String old_school_path = "model/old_school/ladybird2_w.obj";
     static String recent_school_path = "model/recent_school/recent_school_w.obj";
     static String otto_hahn_path = "model/otto_hahn/IronMan.obj";
+    protected static Logger lg;
 
     public static void main(String[] args) {
 
@@ -20,7 +25,21 @@ public class Main extends Application {
 
     //Startup
     private static void startup() {
+        lg = Logger.getLogger("Logger");
+        FileHandler fh;
+        try {
 
+            // This block configure the logger with handler and formatter
+            fh = new FileHandler("Log.log");
+            lg.addHandler(fh);
+            SimpleFormatter formatter = new SimpleFormatter();
+            fh.setFormatter(formatter);
+
+        } catch (SecurityException | IOException e) {
+            e.printStackTrace();
+        }
+        lg.setUseParentHandlers(false);
+        lg.info("Start;");
         new window();
 
     } //Startet automatisch alle Fenster, die das alte Schulgebäude anzeigen
@@ -30,6 +49,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
 
         startup();
+        lg.info("Erzeuge Controller;");
         FXMLLoader loader = new FXMLLoader(Main.class.getResource("Controller.fxml"));
         AnchorPane root = loader.load();
         Scene scene = new Scene(root);
@@ -37,6 +57,8 @@ public class Main extends Application {
         primaryStage.setTitle("Hologramm_Steuerung");
         primaryStage.setAlwaysOnTop(true);
         primaryStage.show();
+        lg.info("Controller erzeugt;");
+
 
     }
 
