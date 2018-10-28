@@ -35,6 +35,7 @@ public class Main extends Application {
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Hologramm_Steuerung");
+        primaryStage.setAlwaysOnTop(true);
         primaryStage.show();
 
     }

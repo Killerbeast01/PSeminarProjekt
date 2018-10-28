@@ -1,5 +1,6 @@
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
 
 public class Controller{
 
@@ -8,6 +9,9 @@ public class Controller{
 
     @FXML
     Button btn_rotate_left, btn_rotate_right;
+
+    @FXML
+    AnchorPane root;
 
     @FXML
     void btn_old_school() {

@@ -34,13 +34,12 @@ public class Object extends JApplet {
         applet_otto.setName("otto");
         System.out.println("loaded applet for obj front");
 
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        frame = new MainFrame(applet_old, screenSize.width / 2, screenSize.height / 2);
+        frame.setLocation(0,0);
 
-
-        frame = new MainFrame(applet_old, 800, 600);
-
-
-        frame.setBackground(Color.BLACK);
-        frame.setSize(800, 600);
+        frame.setBackground(Color.GRAY);
+        frame.setSize(screenSize.width / 2, screenSize.height / 2);
         System.out.println("load frame for obj front");
         frame.setVisible(true);
         frame.setTitle("front");
