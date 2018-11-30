@@ -1,11 +1,14 @@
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.layout.AnchorPane;
 
-public class Controller{
+import javafx.scene.control.ComboBox;
+
+public class Controller {
 
     @FXML
-    Button btn_old_school, btn_recent_school, btn_otto, btn_rotate_reset;
+    Button btn_rotate_reset;
 
     @FXML
     Button btn_rotate_left, btn_rotate_right;
@@ -14,25 +17,11 @@ public class Controller{
     AnchorPane root;
 
     @FXML
-    void btn_old_school() {
-
-        Main.showoldschool();
-
-    }
+    ComboBox cmbModelChecker;
 
     @FXML
-    void btn_recent_school() {
+    ChoiceBox cbModelChecker;
 
-        Main.showrecentschool();
-
-    }
-
-    @FXML
-    void btn_otto() {
-
-        Main.showottohahn();
-
-    }
 
     @FXML
     void btn_rotate_reset() {
@@ -53,6 +42,11 @@ public class Controller{
 
         Main.rotateleft();
 
+    }
+
+    @FXML
+    void cbModelChecker() {
+        Main.modelchange();
     }
 
 }

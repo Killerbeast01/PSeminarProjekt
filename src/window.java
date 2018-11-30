@@ -32,4 +32,18 @@ class window {
 
     } //Dreht alle Objekte nach links
 
+    static void standbyrotation() {
+        Object.standbyrotate();
+        Objectback.standbyrotate();
+        Objectleft.standbyrotate();
+        Objectright.standbyrotate();
+    }
+
+    static void standbyrotationreverse() {
+        Object.standbyrotatereverse();
+        Objectback.standbyrotatereverse();
+        Objectleft.standbyrotatereverse();
+        Objectright.standbyrotatereverse();
+    }
+
 }

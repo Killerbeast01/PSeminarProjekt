@@ -1,21 +1,28 @@
 import javafx.application.Application;
+import javafx.collections.FXCollections;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+
 import java.awt.*;
+import java.io.File;
 import java.io.IOException;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
+
 public class Main extends Application {
 
     private static int Rotation = 0;
-    static String old_school_path = "model/old_school/ladybird2_w.obj";
-    static String recent_school_path = "model/recent_school/recent_school_w.obj";
-    static String otto_hahn_path = "model/otto_hahn/IronMan.obj";
-    protected static Logger lg;
+    private static int StandbyRotation =0;
+    private static Controller controller;
+    static File[] ordnerarray;
+                static String old_school_path = "model/old_school/old_school.obj";
+                static String recent_school_path = "model/recent_school/recent_school.obj";
+                static String otto_hahn_path = "model/otto_hahn/otto_hahn.obj";
+    static Logger lg;
 
     public static void main(String[] args) {
 
@@ -40,6 +47,7 @@ public class Main extends Application {
         }
         lg.setUseParentHandlers(false);
         lg.info("Start;");
+        ordnereinlesen();
         new window();
 
     } //Startet automatisch alle Fenster, die das alte Schulgebäude anzeigen
@@ -51,21 +59,66 @@ public class Main extends Application {
         startup();
         lg.info("Erzeuge Controller;");
         FXMLLoader loader = new FXMLLoader(Main.class.getResource("Controller.fxml"));
+
         AnchorPane root = loader.load();
+
+
+            String[] modelStrings = new String[ordnerarray.length];
+            for (int i=0; i < modelStrings.length; i++) {
+                modelStrings[i] = ordnerarray[i].getName();
+            }
+            controller = loader.getController();
+            controller.cbModelChecker.setItems(FXCollections.observableArrayList(modelStrings));
+
+
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Hologramm_Steuerung");
         primaryStage.setAlwaysOnTop(true);
         primaryStage.show();
         lg.info("Controller erzeugt;");
-
+        turnThread turnThread = new turnThread();
+        turnThread.start();
 
     }
 
+    private static void ordnereinlesen() {
+
+        int ordner = 0;
+        File f = new File("model");
+        File[] modelArray = f.listFiles();
+        assert modelArray != null;
+        for (File aModelArray : modelArray) { //Anzahl der Ordner in "model" festgelegt
+
+            if (aModelArray.isDirectory()) {
+                ordner += 1;
+            }
+
+        }
+        if (ordner == 0) {
+            return;
+        } //Falls keine Ordner in dem "model"Ordner sind
+        ordnerarray = new File[ordner];
+        int x = 0;
+        for (File aModelArray : modelArray) { //Ordner in Array einlesen
+
+            if (aModelArray.isDirectory()) {
+                ordnerarray[x] = aModelArray;
+                x = x + 1;
+            }
+
+        }
+
+        for (File anOrdnerarray : ordnerarray) {
+            System.out.println(anOrdnerarray.getName());
+        }
+
+    }
 
     //Actions;
     static void rotateleft() {
             Rotation += 1;
+            turnThread.setT(0);
             System.out.print("Rotation um 1 erhöht --> ");
             System.out.println(Rotation);
             window.leftrotation();
@@ -74,6 +127,7 @@ public class Main extends Application {
 
     static void rotateright() {
             Rotation -= 1;
+            turnThread.setT(0);
             System.out.print("Rotation um 1 verkleinert --> ");
             System.out.println(Rotation);
             window.rightrotation();
@@ -81,7 +135,7 @@ public class Main extends Application {
         } //Sorgt für die Rotation aller Objekte nach rechts
 
     static void rotatereset() {
-
+        turnThread.setT(0);
 
         if (Rotation != 0) {
             if (Rotation > 0) {
@@ -101,101 +155,76 @@ public class Main extends Application {
 
             }
         }
+
+        if (StandbyRotation != 0) {
+
+            for (int i = 0; i > StandbyRotation; i--) {
+                window.standbyrotationreverse();
+            }
+
+        }
+
+        StandbyRotation = 0;
         Rotation = 0;
     } //Resettet die Rotation aller Objekte
 
-    //Windows;
-    static void showoldschool() {
+    static void modelchange() {
 
-    Object.applet_old.setVisible(true);
-    Object.applet_otto.setVisible(false);
-    Object.applet_recent.setVisible(false);
+        System.out.println("Neues Model wird angewählt");
+        int feldnummer = controller.cbModelChecker.getSelectionModel().getSelectedIndex();
+        String modelname = ordnerarray[feldnummer].getName();
 
-    Objectback.applet_old.setVisible(true);
-    Objectback.applet_otto.setVisible(false);
-    Objectback.applet_recent.setVisible(false);
+        for (int i = 0; i < ordnerarray.length; i++) {
+            if (ordnerarray[i].getName().equals(modelname)) {
 
-    Objectleft.applet_old.setVisible(true);
-    Objectleft.applet_otto.setVisible(false);
-    Objectleft.applet_recent.setVisible(false);
+                Object.applets[i].setVisible(true);
+                Dimension size = Object.frame.getSize();
+                Object.frame.add(Object.applets[i]);
+                Object.frame.pack();
+                Object.frame.setSize(size);
 
-    Objectright.applet_old.setVisible(true);
-    Objectright.applet_otto.setVisible(false);
-    Objectright.applet_recent.setVisible(false);
+                Objectback.applets[i].setVisible(true);
+                Dimension sizeback = Objectback.frame.getSize();
+                Objectback.frame.add(Objectback.applets[i]);
+                Objectback.frame.pack();
+                Objectback.frame.setSize(sizeback);
 
-    } //Zeigt in allen Fenstern das alte Schulgebäude an
+                Objectright.applets[i].setVisible(true);
+                Dimension sizeright = Objectright.frame.getSize();
+                Objectright.frame.add(Objectright.applets[i]);
+                Objectright.frame.pack();
+                Objectright.frame.setSize(sizeright);
 
-    static void showrecentschool() {
+                Objectleft.applets[i].setVisible(true);
+                Dimension sizeleft = Objectleft.frame.getSize();
+                Objectleft.frame.add(Objectleft.applets[i]);
+                Objectleft.frame.pack();
+                Objectleft.frame.setSize(sizeleft);
 
-        Object.applet_old.setVisible(false);
-        Object.applet_otto.setVisible(false);
-        Object.applet_recent.setVisible(true);
-        Dimension size = Object.frame.getSize();
-        Object.frame.add(Object.applet_recent);
-        Object.frame.pack();
-        Object.frame.setSize(size);
 
-        Objectback.applet_old.setVisible(false);
-        Objectback.applet_otto.setVisible(false);
-        Objectback.applet_recent.setVisible(true);
-        Dimension sizeback = Objectback.frame.getSize();
-        Objectback.frame.add(Objectback.applet_recent);
-        Objectback.frame.pack();
-        Objectback.frame.setSize(sizeback);
+            } else {
 
-        Objectleft.applet_old.setVisible(false);
-        Objectleft.applet_otto.setVisible(false);
-        Objectleft.applet_recent.setVisible(true);
-        Dimension sizeleft = Objectleft.frame.getSize();
-        Objectleft.frame.add(Objectleft.applet_recent);
-        Objectleft.frame.pack();
-        Objectleft.frame.setSize(sizeleft);
 
-        Objectright.applet_old.setVisible(false);
-        Objectright.applet_otto.setVisible(false);
-        Objectright.applet_recent.setVisible(true);
-        Dimension sizeright = Objectright.frame.getSize();
-        Objectright.frame.add(Objectright.applet_recent);
-        Objectright.frame.pack();
-        Objectright.frame.setSize(sizeright);
 
-    } //Zeigt in allen Fenstern das aktuelle Schulgebäude an
+                Object.applets[i].setVisible(false);
+                Objectback.applets[i].setVisible(false);
+                Objectleft.applets[i].setVisible(false);
+                Objectright.applets[i].setVisible(false);
 
-    static void showottohahn() {
 
-        Object.applet_old.setVisible(false);
-        Object.applet_otto.setVisible(true);
-        Object.applet_recent.setVisible(false);
-        Dimension size = Object.frame.getSize();
-        Object.frame.add(Object.applet_otto);
-        Object.frame.pack();
-        Object.frame.setSize(size);
 
-        Objectback.applet_old.setVisible(false);
-        Objectback.applet_otto.setVisible(true);
-        Objectback.applet_recent.setVisible(false);
-        Dimension sizeback = Objectback.frame.getSize();
-        Objectback.frame.add(Objectback.applet_otto);
-        Objectback.frame.pack();
-        Objectback.frame.setSize(sizeback);
+            }
+        }
 
-        Objectleft.applet_old.setVisible(false);
-        Objectleft.applet_otto.setVisible(true);
-        Objectleft.applet_recent.setVisible(false);
-        Dimension sizeleft = Objectleft.frame.getSize();
-        Objectleft.frame.add(Objectleft.applet_otto);
-        Objectleft.frame.pack();
-        Objectleft.frame.setSize(sizeleft);
+    }
 
-        Objectright.applet_old.setVisible(false);
-        Objectright.applet_otto.setVisible(true);
-        Objectright.applet_recent.setVisible(false);
-        Dimension sizeright = Objectright.frame.getSize();
-        Objectright.frame.add(Objectright.applet_otto);
-        Objectright.frame.pack();
-        Objectright.frame.setSize(sizeright);
+    public static void rotate() {
+        StandbyRotation -= 1;
+        System.out.print("Rotation um 1 verkleinert --> ");
+        System.out.println(StandbyRotation);
+        window.standbyrotation();
+    }
 
-    } //Zeigt in allen Fenstern die Büste von Otto Hahn an
 
 }
 
