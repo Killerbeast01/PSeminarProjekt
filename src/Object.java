@@ -52,11 +52,13 @@ public class Object extends JApplet {
         frame.setLocation(0,0);
 
         frame.setBackground(Color.GRAY);
-        frame.setSize(screenSize.width / 2, screenSize.height / 2);
+        //frame.setSize(screenSize.width / 2, screenSize.height / 2);
+        //frame.setExtendedState(Frame.MAXIMIZED_BOTH);
         frame.setVisible(true);
         frame.setTitle("front");
         Main.lg.info("Fenster erzeugt;");
         runturnleft();
+        Main.Fenster += 1;
 
     }
 
@@ -134,6 +136,7 @@ public class Object extends JApplet {
         } catch (Exception e) {
             //noinspection ThrowablePrintedToSystemOut
             System.err.println(e);
+            Main.lg.warning(e.toString());
             System.exit(1);
         }
 

@@ -57,6 +57,7 @@ public class Objectleft extends JApplet {
         frame.setTitle("links");
         Main.lg.info("Fenster erzeugt;");
         runturnleft();
+        Main.Fenster += 1;
 
     }
 

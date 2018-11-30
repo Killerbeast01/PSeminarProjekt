@@ -1,6 +1,7 @@
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
 import javafx.scene.control.ComboBox;
@@ -17,11 +18,10 @@ public class Controller {
     AnchorPane root;
 
     @FXML
-    ComboBox cmbModelChecker;
-
-    @FXML
     ChoiceBox cbModelChecker;
 
+    @FXML
+    ImageView arrowleft, arrowright;
 
     @FXML
     void btn_rotate_reset() {
@@ -49,4 +49,11 @@ public class Controller {
         Main.modelchange();
     }
 
+    public ChoiceBox getCbModelChecker() {
+        return cbModelChecker;
+    }
+
+    public void setCbModelChecker(ChoiceBox cbModelChecker) {
+        this.cbModelChecker = cbModelChecker;
+    }
 }

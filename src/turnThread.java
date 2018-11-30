@@ -5,7 +5,7 @@ public class turnThread extends Thread {
 
     private static int t=0;
 
-    public static void setT(int t) {
+    static void setT(int t) {
         turnThread.t = t;
     }
 

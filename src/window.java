@@ -1,7 +1,10 @@
 class window {
 
     window() {
-        Main.lg.info("Starte Threads für Fenster;");
+
+        if (Main.ordnerarray != null) {
+
+            Main.lg.info("Starte Threads für Fenster;");
             Thread obj1 = new Thread(new hilfclassethread(1));
             Thread obj2 = new Thread(new hilfclassethread(2));
             Thread obj3 = new Thread(new hilfclassethread(3));
@@ -10,40 +13,48 @@ class window {
             obj2.start();
             obj3.start();
             obj4.start();
-        Main.lg.info("Threads für Fenster gestartet;");
+            Main.lg.info("Threads für Fenster gestartet;");
+        }
+
     } //Startet die Fenster in Threads, damit es nicht so lange dauert
 
     //Rotation;
     static void rightrotation() {
-
-        Object.turnleft();
-        Objectback.turnleft();
-        Objectleft.turnleft();
-        Objectright.turnleft();
+        if (Main.ordnerarray != null) {
+            Object.turnleft();
+            Objectback.turnleft();
+            Objectleft.turnleft();
+            Objectright.turnleft();
+        }
 
     } //Dreht alle Objekte nach rechts
 
     static void leftrotation(){
-
-        Object.turnright();
-        Objectback.turnright();
-        Objectleft.turnright();
-        Objectright.turnright();
+        if (Main.ordnerarray != null) {
+            Object.turnright();
+            Objectback.turnright();
+            Objectleft.turnright();
+            Objectright.turnright();
+        }
 
     } //Dreht alle Objekte nach links
 
     static void standbyrotation() {
-        Object.standbyrotate();
-        Objectback.standbyrotate();
-        Objectleft.standbyrotate();
-        Objectright.standbyrotate();
+        if (Main.ordnerarray != null) {
+            Object.standbyrotate();
+            Objectback.standbyrotate();
+            Objectleft.standbyrotate();
+            Objectright.standbyrotate();
+        }
     }
 
     static void standbyrotationreverse() {
-        Object.standbyrotatereverse();
-        Objectback.standbyrotatereverse();
-        Objectleft.standbyrotatereverse();
-        Objectright.standbyrotatereverse();
+        if (Main.ordnerarray != null) {
+            Object.standbyrotatereverse();
+            Objectback.standbyrotatereverse();
+            Objectleft.standbyrotatereverse();
+            Objectright.standbyrotatereverse();
+        }
     }
 
 }

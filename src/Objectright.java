@@ -56,6 +56,7 @@ public class Objectright extends JApplet {
         frame.setTitle("rechts");
         Main.lg.info("Fenster erzeugt;");
         runturnright();
+        Main.Fenster += 1;
 
     }
 
