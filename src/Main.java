@@ -4,14 +4,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
-
 
 public class Main extends Application {
 
@@ -112,9 +110,7 @@ public class Main extends Application {
             controller.cbModelChecker.setItems(FXCollections.observableArrayList(err));
 
         }
-        controller.btn_rotate_right.setDisable(true);
-        controller.btn_rotate_left.setDisable(true);
-        controller.btn_rotate_reset.setDisable(true);
+
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Hologramm_Steuerung");
@@ -179,12 +175,10 @@ public class Main extends Application {
 
                 } else {
 
-
                     Object.applets[i].setVisible(false);
                     Objectback.applets[i].setVisible(false);
                     Objectleft.applets[i].setVisible(false);
                     Objectright.applets[i].setVisible(false);
-
 
                 }
             }
@@ -248,6 +242,15 @@ public class Main extends Application {
             Rotation = 0;
         }
     } //Resettet die Rotation aller Objekte
+
+    static void zoom() {
+
+        if (ordnerarray != null) {
+            double zoomlvl = controller.szoom.getValue();
+
+        }
+
+    }
 
     static void rotate() {
         if (ordnerarray != null) {

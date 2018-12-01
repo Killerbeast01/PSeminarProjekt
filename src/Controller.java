@@ -1,10 +1,9 @@
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Slider;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-
-import javafx.scene.control.ComboBox;
 
 public class Controller {
 
@@ -22,6 +21,9 @@ public class Controller {
 
     @FXML
     ImageView arrowleft, arrowright;
+
+    @FXML
+    Slider szoom;
 
     @FXML
     void btn_rotate_reset() {
@@ -49,11 +51,8 @@ public class Controller {
         Main.modelchange();
     }
 
-    public ChoiceBox getCbModelChecker() {
+    ChoiceBox getCbModelChecker() {
         return cbModelChecker;
     }
 
-    public void setCbModelChecker(ChoiceBox cbModelChecker) {
-        this.cbModelChecker = cbModelChecker;
-    }
 }
