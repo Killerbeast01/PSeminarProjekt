@@ -1,34 +1,34 @@
-Nov. 30, 2018 2:37:22 NACHM. Main startup
+Dez. 02, 2018 7:55:31 NACHM. Main startup
 INFORMATION: Start;
-Nov. 30, 2018 2:37:22 NACHM. window <init>
+Dez. 02, 2018 7:55:31 NACHM. window <init>
 INFORMATION: Starte Threads für Fenster;
-Nov. 30, 2018 2:37:22 NACHM. window <init>
+Dez. 02, 2018 7:55:31 NACHM. window <init>
 INFORMATION: Threads für Fenster gestartet;
-Nov. 30, 2018 2:37:22 NACHM. Main start
+Dez. 02, 2018 7:55:31 NACHM. Main start
 INFORMATION: Erzeuge Controller;
-Nov. 30, 2018 2:37:23 NACHM. Objectright loadObject
+Dez. 02, 2018 7:55:31 NACHM. Object loadObject
 INFORMATION: Erzeuge Fenster;
-Nov. 30, 2018 2:37:23 NACHM. Objectleft loadObject
+Dez. 02, 2018 7:55:31 NACHM. Objectright loadObject
 INFORMATION: Erzeuge Fenster;
-Nov. 30, 2018 2:37:23 NACHM. Objectback loadObject
+Dez. 02, 2018 7:55:31 NACHM. Objectleft loadObject
 INFORMATION: Erzeuge Fenster;
-Nov. 30, 2018 2:37:23 NACHM. Object loadObject
+Dez. 02, 2018 7:55:31 NACHM. Objectback loadObject
 INFORMATION: Erzeuge Fenster;
-Nov. 30, 2018 2:37:23 NACHM. Objectback loadObject
+Dez. 02, 2018 7:55:31 NACHM. Objectleft loadObject
 INFORMATION: Erzeuge applet_old;
-Nov. 30, 2018 2:37:23 NACHM. Objectleft loadObject
+Dez. 02, 2018 7:55:31 NACHM. Objectright loadObject
 INFORMATION: Erzeuge applet_old;
-Nov. 30, 2018 2:37:23 NACHM. Objectright loadObject
+Dez. 02, 2018 7:55:31 NACHM. Object loadObject
 INFORMATION: Erzeuge applet_old;
-Nov. 30, 2018 2:37:23 NACHM. Object loadObject
+Dez. 02, 2018 7:55:31 NACHM. Objectback loadObject
 INFORMATION: Erzeuge applet_old;
-Nov. 30, 2018 2:37:23 NACHM. Main start
+Dez. 02, 2018 7:55:32 NACHM. Main start
 INFORMATION: Controller erzeugt;
-Nov. 30, 2018 2:37:31 NACHM. Objectright loadObject
+Dez. 02, 2018 7:55:34 NACHM. Objectright loadObject
 INFORMATION: Fenster erzeugt;
-Nov. 30, 2018 2:37:31 NACHM. Objectleft loadObject
+Dez. 02, 2018 7:55:34 NACHM. Objectback loadObject
 INFORMATION: Fenster erzeugt;
-Nov. 30, 2018 2:37:31 NACHM. Object loadObject
+Dez. 02, 2018 7:55:34 NACHM. Objectleft loadObject
 INFORMATION: Fenster erzeugt;
-Nov. 30, 2018 2:37:31 NACHM. Objectback loadObject
+Dez. 02, 2018 7:55:34 NACHM. Object loadObject
 INFORMATION: Fenster erzeugt;

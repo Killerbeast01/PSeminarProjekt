@@ -14,6 +14,7 @@ import java.util.logging.SimpleFormatter;
 public class Main extends Application {
 
     private static int Rotation = 0;
+    private static double Zoom = 0;
     private static int StandbyRotation =0;
     private static Controller controller;
     static File[] ordnerarray=null;
@@ -120,10 +121,9 @@ public class Main extends Application {
         primaryStage.show();
         primaryStage.widthProperty().addListener((obs, oldVal, newVal) -> resizecomponents(primaryStage));
         primaryStage.heightProperty().addListener((obs, oldVal, newVal) -> resizecomponents(primaryStage));
-        resizecomponents(primaryStage);
         lg.info("Controller erzeugt;");
         turnThread turnThread = new turnThread();
-        turnThread.start();
+        //turnThread.start();
 
         while (Fenster !=4) {
             System.out.println("auf Fenster warten...");
@@ -243,10 +243,26 @@ public class Main extends Application {
         }
     } //Resettet die Rotation aller Objekte
 
-    static void zoom() {
+    static void zoom(int i) {
 
         if (ordnerarray != null) {
-            double zoomlvl = controller.szoom.getValue();
+
+            if (i > 0) {
+                //Zoom in
+                if (Zoom < 5) {
+                    window.zoomin();
+                }
+                Zoom +=1;
+
+
+            }
+            if (i < 0) {
+                //Zoom out
+                if (Zoom > -5) {
+                    window.zoomout();
+                }
+                Zoom -=1;
+            }
 
         }
 

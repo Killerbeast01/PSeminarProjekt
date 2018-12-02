@@ -23,7 +23,7 @@ public class Controller {
     ImageView arrowleft, arrowright;
 
     @FXML
-    Slider szoom;
+    Button btnzoomin, btnzoomout;
 
     @FXML
     void btn_rotate_reset() {
@@ -48,11 +48,29 @@ public class Controller {
 
     @FXML
     void cbModelChecker() {
+
         Main.modelchange();
+
     }
 
     ChoiceBox getCbModelChecker() {
+
         return cbModelChecker;
+
+    }
+
+    @FXML
+    void zoomin(){
+
+        Main.zoom(1);
+
+    }
+
+    @FXML
+    void zoomout(){
+
+        Main.zoom(-1);
+
     }
 
 }

@@ -57,4 +57,17 @@ class window {
         }
     }
 
+    static void zoomin() {
+        if (Main.ordnerarray != null) {
+            Object.zoomin();
+        }
+    }
+
+    static void zoomout() {
+        if (Main.ordnerarray != null) {
+            Object.zoomout();
+        }
+    }
+
+
 }

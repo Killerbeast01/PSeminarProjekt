@@ -24,15 +24,17 @@
             <Image url="@/model/arrow_turn_right.png" />
          </image>
       </ImageView>
-      <Button fx:id="btn_rotate_reset" mnemonicParsing="false" onAction="#btn_rotate_reset" text="Zentrieren">
+      <Button fx:id="btn_rotate_reset" disable="true" mnemonicParsing="false" onAction="#btn_rotate_reset" text="Zentrieren">
          <font>
             <Font size="18.0" />
          </font></Button>
-      <Button fx:id="btn_rotate_left" mnemonicParsing="false" onAction="#btn_rotate_left" opacity="0.0" />
-      <Button fx:id="btn_rotate_right" mnemonicParsing="false" onAction="#btn_rotate_right" opacity="0.0" />
-      <ChoiceBox fx:id="cbModelChecker" accessibleHelp="Auswahl der Modelle" onAction="#cbModelChecker">
+      <Button fx:id="btn_rotate_left" disable="true" mnemonicParsing="false" onAction="#btn_rotate_left" opacity="0.0" />
+      <Button fx:id="btn_rotate_right" disable="true" mnemonicParsing="false" onAction="#btn_rotate_right" opacity="0.0" />
+      <ChoiceBox fx:id="cbModelChecker" accessibleHelp="Auswahl der Modelle" disable="true" onAction="#cbModelChecker">
          <padding>
             <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
          </padding></ChoiceBox>
+      <Button fx:id="btnzoomin" layoutX="505.0" layoutY="138.0" mnemonicParsing="false" onAction="#zoomin" text="Zoom In" />
+      <Button fx:id="btnzoomout" layoutX="500.0" layoutY="189.0" mnemonicParsing="false" onAction="#zoomout" text="Zoom Out" />
    </children>
 </AnchorPane>
