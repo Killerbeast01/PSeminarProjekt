@@ -20,8 +20,8 @@ public class Object extends JApplet {
     private static Transform3D[] t3d;
     private static Transform3D[] t3dstep;
     private static Matrix4d[] matrix;
-
     private static SimpleUniverse[] universe;
+    private static boolean firtszoom = true;
 
     static void loadObject() {
 
@@ -205,12 +205,30 @@ public class Object extends JApplet {
                     t3d[i].setTranslation(new Vector3d(matrix[i].m03, matrix[i].m13, matrix[i].m23));
                     tg[i].setTransform(t3d[i]);
 
-
-
-
                 }
 
+                for (int i = 0; i < Main.ordnerarray.length; i++) {
 
+                    if (firtszoom){
+
+                        t3dstep[i].rotY(-0.313);
+                        tg[i].getTransform(t3d[i]);
+                        t3d[i].get(matrix[i]);
+                        t3d[i].setTranslation(new Vector3d(0.0, 0.0, 0.0));
+                        t3d[i].mul(t3dstep[i]);
+                        t3d[i].setTranslation(new Vector3d(matrix[i].m03, matrix[i].m13, matrix[i].m23));
+                        tg[i].setTransform(t3d[i]);
+                        firtszoom = false;
+                    }
+                    t3dstep[i].rotY(0);
+                    tg[i].getTransform(t3d[i]);
+                    t3d[i].get(matrix[i]);
+                    t3d[i].setTranslation(new Vector3d(0.0, 0.0, 0.0));
+                    t3d[i].mul(t3dstep[i]);
+                    t3d[i].setTranslation(new Vector3d(matrix[i].m03, matrix[i].m13, matrix[i].m23));
+                    tg[i].setTransform(t3d[i]);
+
+                }
 
     }
 

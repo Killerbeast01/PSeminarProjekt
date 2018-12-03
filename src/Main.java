@@ -123,7 +123,7 @@ public class Main extends Application {
         primaryStage.heightProperty().addListener((obs, oldVal, newVal) -> resizecomponents(primaryStage));
         lg.info("Controller erzeugt;");
         turnThread turnThread = new turnThread();
-        //turnThread.start();
+        turnThread.start();
 
         while (Fenster !=4) {
             System.out.println("auf Fenster warten...");
@@ -132,7 +132,7 @@ public class Main extends Application {
         controller.btn_rotate_right.setDisable(false);
         controller.btn_rotate_left.setDisable(false);
         controller.btn_rotate_reset.setDisable(false);
-
+        resizecomponents(primaryStage);
     }
 
     //Actions;
@@ -251,19 +251,18 @@ public class Main extends Application {
                 //Zoom in
                 if (Zoom < 5) {
                     window.zoomin();
+                    Zoom +=1;
                 }
-                Zoom +=1;
-
 
             }
             if (i < 0) {
                 //Zoom out
                 if (Zoom > -5) {
                     window.zoomout();
+                    Zoom -=1;
                 }
-                Zoom -=1;
             }
-
+            System.out.println("Zoom: " + Zoom);
         }
 
     }

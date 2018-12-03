@@ -8,7 +8,7 @@
       <excludeFolder url="file://$MODULE_DIR$/_model" />
       <excludeFolder url="file://$MODULE_DIR$/model" />
     </content>
-    <orderEntry type="jdk" jdkName="10.0" jdkType="JavaSDK" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="javax" level="project" />
     <orderEntry type="library" exported="" name="j3dcore" level="project" />
