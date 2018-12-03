@@ -246,7 +246,6 @@ public class Object extends JApplet {
 
     }
 
-
     static void standbyrotate() {
 
         for (int i = 0; i < Main.ordnerarray.length; i++) {

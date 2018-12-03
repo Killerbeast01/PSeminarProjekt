@@ -210,8 +210,8 @@ public class Main extends Application {
     static void rotatereset() {
         if (ordnerarray != null) {
             turnThread.setT(-5);
-
             if (Rotation != 0) {
+            //---------------------------------------------
                 if (Rotation > 0) {
                     int i = 0;
                     System.out.println("reset " + Rotation);
@@ -219,27 +219,38 @@ public class Main extends Application {
                         window.rightrotation();
                     }
                 } else {
+            //---------------------------------------------
                     System.out.println("reset " + Rotation);
                     int i = 0;
                     for (; i > Rotation; i--) {
-                        System.out.println("starte reset" + i);
                         window.leftrotation();
-
                     }
-
                 }
             }
-
+            //---------------------------------------------
             if (StandbyRotation != 0) {
-
                 for (int i = 0; i > StandbyRotation; i--) {
                     window.standbyrotationreverse();
                 }
-
             }
-
             StandbyRotation = 0;
             Rotation = 0;
+            //---------------------------------------------
+            if (Zoom != 0) {
+                if (Zoom > 0) {
+                    while (Zoom != 0) {
+                        window.zoomout();
+                        Zoom -= 1;
+                    }
+                }
+            //---------------------------------------------
+                if (Zoom < 0) {
+                    while (Zoom != 0) {
+                        window.zoomin();
+                        Zoom += 1;
+                    }
+                }
+            }
         }
     } //Resettet die Rotation aller Objekte
 
