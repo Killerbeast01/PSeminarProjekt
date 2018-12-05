@@ -239,14 +239,14 @@ public class Main extends Application {
             if (Zoom != 0) {
                 if (Zoom > 0) {
                     while (Zoom != 0) {
-                        window.zoomout();
+                        window.znachvorne();
                         Zoom -= 1;
                     }
                 }
             //---------------------------------------------
                 if (Zoom < 0) {
                     while (Zoom != 0) {
-                        window.zoomin();
+                        window.znachhinten();
                         Zoom += 1;
                     }
                 }
@@ -255,24 +255,44 @@ public class Main extends Application {
     } //Resettet die Rotation aller Objekte
 
     static void zoom(int i) {
-
+        System.out.println("Zoom input:" + i);
         if (ordnerarray != null) {
 
-            if (i > 0) {
-                //Zoom in
-                if (Zoom < 5) {
-                    window.zoomin();
-                    Zoom +=1;
+            int rotationvorher = Rotation;
+            int rotationvorherstandby = StandbyRotation;
+            rotatereset();
+                if (i > 0) { //zoom in
+                        window.znachvorne();
+                        Zoom = Zoom +1;
                 }
+                if (i < 0) {
+                        window.znachhinten();
+                        Zoom = Zoom -1;
 
-            }
-            if (i < 0) {
-                //Zoom out
-                if (Zoom > -5) {
-                    window.zoomout();
-                    Zoom -=1;
+                }
+            if (rotationvorher > 0) {
+                for (int x = 0; x < rotationvorher; x++) {
+                    rotateright();
                 }
             }
+            if (rotationvorher < 0) {
+                for (int x = 0; x > rotationvorher; x--) {
+                    rotateright();
+                }
+            }
+            if (StandbyRotation > 0) {
+                for (int x = 0; x < StandbyRotation; x++) {
+                    window.standbyrotationreverse();
+                }
+            }
+            if (StandbyRotation < 0) {
+                for (int x = 0; x > StandbyRotation; x++) {
+                    window.standbyrotationreverse();
+                }
+            }
+            Rotation = 0;
+            StandbyRotation = 0;
+            rotationvorher = 0;
             System.out.println("Zoom: " + Zoom);
         }
 

@@ -57,23 +57,16 @@ class window {
         }
     }
 
-    static void zoomin() {
-        if (Main.ordnerarray != null) {
-            Object.zoomin();
-            Objectback.zoomin();
-            Objectleft.zoomin();
-            Objectright.zoomin();
+    static void znachvorne() {
 
-        }
+        Object.znachvorne();
+
     }
 
-    static void zoomout() {
-        if (Main.ordnerarray != null) {
-            Object.zoomout();
-            Objectback.zoomout();
-            Objectleft.zoomout();
-            Objectright.zoomout();
-        }
+    static void znachhinten() {
+
+        Object.znachhinten();
+
     }
 
 
