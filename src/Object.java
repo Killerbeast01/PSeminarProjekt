@@ -52,8 +52,7 @@ public class Object extends JApplet {
         frame.setLocation(0,0);
 
         frame.setBackground(Color.GRAY);
-        //frame.setSize(screenSize.width / 2, screenSize.height / 2);
-        //frame.setExtendedState(Frame.MAXIMIZED_BOTH);
+        frame.setExtendedState(Frame.MAXIMIZED_BOTH);
         frame.setVisible(true);
         frame.setTitle("front");
         Main.lg.info("Fenster erzeugt;");

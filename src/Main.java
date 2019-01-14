@@ -121,17 +121,19 @@ public class Main extends Application {
         primaryStage.setAlwaysOnTop(true);
         primaryStage.setOnCloseRequest(event -> System.exit(0));
         controller.cbModelChecker.focusTraversableProperty();
+        primaryStage.setX(-20);
+        primaryStage.setFullScreen(true);
         primaryStage.show();
         primaryStage.widthProperty().addListener((obs, oldVal, newVal) -> resizecomponents(primaryStage));
         primaryStage.heightProperty().addListener((obs, oldVal, newVal) -> resizecomponents(primaryStage));
         resizecomponents(primaryStage);
         lg.info("Controller erzeugt;");
         turnThread turnThread = new turnThread();
-        turnThread.start();
-
+        System.out.println("auf Fenster warten...");
         while (Fenster !=4) {
-            System.out.println("auf Fenster warten...");
+            Thread.sleep(1500);
         }
+        turnThread.start();
         controller.cbModelChecker.setDisable(false);
         controller.btn_rotate_right.setDisable(false);
         controller.btn_rotate_left.setDisable(false);

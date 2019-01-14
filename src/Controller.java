@@ -4,8 +4,6 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
-import javafx.scene.control.ComboBox;
-
 public class Controller {
 
     @FXML
@@ -49,11 +47,8 @@ public class Controller {
         Main.modelchange();
     }
 
-    public ChoiceBox getCbModelChecker() {
+    ChoiceBox getCbModelChecker() {
         return cbModelChecker;
     }
 
-    public void setCbModelChecker(ChoiceBox cbModelChecker) {
-        this.cbModelChecker = cbModelChecker;
-    }
 }

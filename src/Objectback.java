@@ -49,10 +49,9 @@ public class Objectback extends JApplet {
 
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         frame = new MainFrame(applets[0], screenSize.width / 2, screenSize.height / 2);
-        frame.setLocation(screenSize.width /2,0);
-
+        frame.setLocation(screenSize.width * 3, 0);
         frame.setBackground(Color.GRAY);
-        frame.setSize(screenSize.width / 2, screenSize.height / 2);
+        frame.setExtendedState(Frame.MAXIMIZED_BOTH);
         frame.setVisible(true);
         frame.setTitle("back");
         Main.lg.info("Fenster erzeugt;");
@@ -64,25 +63,15 @@ public class Objectback extends JApplet {
     private Objectback(int i ,String objectpath) {
 
 
-
-
         setLayout(new BorderLayout());
         GraphicsConfiguration config = SimpleUniverse.getPreferredConfiguration();
-
         Canvas3D canvas = new Canvas3D(config);
         add("Center", canvas);
-
         universe[i] = new SimpleUniverse(canvas);
-
-
         scene[i] = createSceneGraph(i, objectpath);
-
-
         universe[i].getViewingPlatform().setNominalViewingTransform();
         universe[i].getViewer().getView().setBackClipDistance(100.0);
         universe[i].addBranchGraph(scene[i]);
-
-
 
     }
 
