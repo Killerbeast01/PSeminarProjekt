@@ -5,6 +5,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+import javax.swing.*;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
@@ -16,9 +17,9 @@ import java.util.logging.SimpleFormatter;
 public class Main extends Application {
 
     private static int Rotation = 0;
-    private static int StandbyRotation =0;
+    private static int StandbyRotation = 0;
     private static Controller controller;
-    static File[] ordnerarray=null;
+    static File[] ordnerarray = null;
     static Logger lg;
     static int Fenster = 0;
 
@@ -58,31 +59,31 @@ public class Main extends Application {
             File[] modelArray = f.listFiles();
 
 
-        assert modelArray != null;
-        for (File aModelArray : modelArray) { //Anzahl der Ordner in "model" festgelegt
+            assert modelArray != null;
+            for (File aModelArray : modelArray) { //Anzahl der Ordner in "model" festgelegt
 
-            if (aModelArray.isDirectory()) {
-                ordner += 1;
+                if (aModelArray.isDirectory()) {
+                    ordner += 1;
+                }
+
+            }
+            if (ordner == 0) {
+                return;
+            } //Falls keine Ordner in dem "model"Ordner sind
+            ordnerarray = new File[ordner];
+            int x = 0;
+            for (File aModelArray : modelArray) { //Ordner in Array einlesen
+
+                if (aModelArray.isDirectory()) {
+                    ordnerarray[x] = aModelArray;
+                    x = x + 1;
+                }
+
             }
 
-        }
-        if (ordner == 0) {
-            return;
-        } //Falls keine Ordner in dem "model"Ordner sind
-        ordnerarray = new File[ordner];
-        int x = 0;
-        for (File aModelArray : modelArray) { //Ordner in Array einlesen
-
-            if (aModelArray.isDirectory()) {
-                ordnerarray[x] = aModelArray;
-                x = x + 1;
+            for (File anOrdnerarray : ordnerarray) {
+                System.out.println(anOrdnerarray.getName());
             }
-
-        }
-
-        for (File anOrdnerarray : ordnerarray) {
-            System.out.println(anOrdnerarray.getName());
-        }
 
         } catch (Exception e) {
             lg.warning(e.toString() + "\n " + "Ordner 'Model' nicht gefunden!");
@@ -92,7 +93,7 @@ public class Main extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
 
         startup();
         lg.info("Erzeuge Controller;");
@@ -106,7 +107,7 @@ public class Main extends Application {
             }
             controller.cbModelChecker.setItems(FXCollections.observableArrayList(modelStrings));
             controller.cbModelChecker.setDisable(true);
-        } else{
+        } else {
             String[] err = new String[1];
             err[0] = "Keine Modelle vorhanden";
             controller.cbModelChecker.setItems(FXCollections.observableArrayList(err));
@@ -121,24 +122,40 @@ public class Main extends Application {
         primaryStage.setAlwaysOnTop(true);
         primaryStage.setOnCloseRequest(event -> System.exit(0));
         controller.cbModelChecker.focusTraversableProperty();
-        primaryStage.setX(-100);
-        primaryStage.setFullScreen(true);
+        primaryStage.setY(-180);
+        primaryStage.setX(-1020);
+
+        resizecomponents(primaryStage);
+
         primaryStage.show();
         primaryStage.widthProperty().addListener((obs, oldVal, newVal) -> resizecomponents(primaryStage));
         primaryStage.heightProperty().addListener((obs, oldVal, newVal) -> resizecomponents(primaryStage));
-        resizecomponents(primaryStage);
+        primaryStage.xProperty().addListener((obs, oldvar, newvar) -> printloc(primaryStage));
+        primaryStage.yProperty().addListener((obs, oldvar, newvar) -> printloc(primaryStage));
         lg.info("Controller erzeugt;");
         turnThread turnThread = new turnThread();
         System.out.println("auf Fenster warten...");
-        while (Fenster !=4) {
+        while (Fenster != 4) {
             Thread.sleep(1500);
         }
-        turnThread.start();
+
         controller.cbModelChecker.setDisable(false);
         controller.btn_rotate_right.setDisable(false);
         controller.btn_rotate_left.setDisable(false);
         controller.btn_rotate_reset.setDisable(false);
+        primaryStage.setY(-180);
+        primaryStage.setX(-1020);
+        Thread.sleep(1000);
+        primaryStage.setFullScreen(true);
+        primaryStage.setY(-180);
+        primaryStage.setX(-1020);
 
+        turnThread.start();
+    }
+
+    void printloc(Stage primaryStage) {
+
+        System.out.println(primaryStage.getX() + " + " + primaryStage.getY());
     }
 
     //Actions;
@@ -298,8 +315,24 @@ public class Main extends Application {
         controller.btn_rotate_right.setLayoutY(h * 0.2);
 
 
-
     } //Anpassung der Knöpfe an die Größe des Fensters
 
+
+    public static void showOnScreen(int screen, Frame frame) {
+        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        GraphicsDevice[] gd = ge.getScreenDevices();
+        int width = 0, height = 0;
+        if( screen > -1 && screen < gd.length ) {
+            width = gd[screen].getDefaultConfiguration().getBounds().width;
+            height = gd[screen].getDefaultConfiguration().getBounds().height;
+            frame.setLocation(
+                    ((width / 2) - (frame.getSize().width / 2)) + gd[screen].getDefaultConfiguration().getBounds().x,
+                    ((height / 2) - (frame.getSize().height / 2)) + gd[screen].getDefaultConfiguration().getBounds().y
+            );
+            frame.setVisible(true);
+        } else {
+            throw new RuntimeException( "No Screens Found" );
+        }
+    }
 }
 

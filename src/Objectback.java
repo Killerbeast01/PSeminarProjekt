@@ -49,14 +49,15 @@ public class Objectback extends JApplet {
 
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         frame = new MainFrame(applets[0], screenSize.width / 2, screenSize.height / 2);
-        frame.setLocation(screenSize.width * 3, 0);
+
         frame.setBackground(Color.GRAY);
-        frame.setExtendedState(Frame.MAXIMIZED_BOTH);
+
         frame.setVisible(true);
         frame.setTitle("back");
+        frame.show();
         Main.lg.info("Fenster erzeugt;");
         Main.Fenster += 1;
-
+        //frame.setExtendedState(Frame.MAXIMIZED_BOTH);
 
     }
 
@@ -210,6 +211,10 @@ public class Objectback extends JApplet {
 
         }
 
+    }
+
+    static Frame getframe(){
+        return frame;
     }
 
 }
