@@ -121,7 +121,7 @@ public class Main extends Application {
         primaryStage.setAlwaysOnTop(true);
         primaryStage.setOnCloseRequest(event -> System.exit(0));
         controller.cbModelChecker.focusTraversableProperty();
-        primaryStage.setX(-20);
+        primaryStage.setX(-100);
         primaryStage.setFullScreen(true);
         primaryStage.show();
         primaryStage.widthProperty().addListener((obs, oldVal, newVal) -> resizecomponents(primaryStage));

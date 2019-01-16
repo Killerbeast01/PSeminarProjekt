@@ -13,7 +13,7 @@
    <children>
       <ImageView fx:id="arrowleft" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@/model/arrow_turn_left.png" />
+            <Image url="@drawable/arrow_turn_left.png" />
          </image>
          <viewport>
             <Rectangle2D />
@@ -21,7 +21,7 @@
       </ImageView>
       <ImageView fx:id="arrowright" accessibleRole="BUTTON" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@/model/arrow_turn_right.png" />
+            <Image url="@drawable/arrow_turn_right.png" />
          </image>
       </ImageView>
       <Button fx:id="btn_rotate_reset" mnemonicParsing="false" onAction="#btn_rotate_reset" text="Zentrieren">
