@@ -65,7 +65,7 @@ public class Object extends JApplet {
 
         for (int i = 0; i < applets.length; i++) {
 
-            t3dstep[i].setScale(5);
+            t3dstep[i].setScale(4);
             tg[i].getTransform(t3d[i]);
             t3d[i].get(matrix[i]);
             t3d[i].setTranslation(new Vector3d(0.0, 0.0, 0.0));

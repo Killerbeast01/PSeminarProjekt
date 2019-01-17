@@ -6,18 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Hintergrund auf weiß">
-      <change afterPath="$PROJECT_DIR$/src/Otto_Hahn/Model.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Otto_Hahn/Model1.mtl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Otto_Hahn/Otto_Hahn.obj" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Scale erhöht;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Log.log" beforeDir="false" afterPath="$PROJECT_DIR$/Log.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PSeminar_FX.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PSeminar_FX.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/aktuelles Schulgebäude/OHG.obj.mtl" beforeDir="false" afterPath="$PROJECT_DIR$/src/aktuelles Schulgebäude/OHG.obj.mtl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/aktuelles Schulgebäude/aktuelles Schulgebäude.obj" beforeDir="false" afterPath="$PROJECT_DIR$/src/aktuelles Schulgebäude/aktuelles Schulgebäude.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/otto_hahn/Model.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/otto_hahn/Model1.mtl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/otto_hahn/otto_hahn.obj" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/PSeminar_FX_jar/PSeminar_FX_jar.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/PSeminar_FX_jar/PSeminar_FX_jar.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PSeminar_FX/Object.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PSeminar_FX/Object.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PSeminar_FX/Objectback.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PSeminar_FX/Objectback.class" afterDir="false" />
@@ -86,11 +76,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Object.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="63" column="4" selection-start-line="63" selection-start-column="4" selection-end-line="76" selection-end-column="5" />
+            <state relative-caret-position="408">
+              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
               <folding>
                 <element signature="e#386#418#0" expanded="true" />
-                <element signature="method#setforward#0;class#Object#0" />
                 <element signature="method#createObject#0;class#Object#0" />
                 <element signature="method#createLight#0;class#Object#0" />
                 <element signature="method#turnright#0;class#Object#0" />
@@ -105,10 +94,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Objectleft.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
+            <state relative-caret-position="240">
+              <caret line="93" column="33" selection-start-line="93" selection-start-column="33" selection-end-line="93" selection-end-column="33" />
               <folding>
-                <element signature="method#setforward#0;class#Objectleft#0" />
                 <element signature="method#createObject#0;class#Objectleft#0" />
                 <element signature="method#createLight#0;class#Objectleft#0" />
                 <element signature="method#turnright#0;class#Objectleft#0" />
@@ -119,13 +107,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Objectback.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
+            <state relative-caret-position="390">
+              <caret line="83" column="33" selection-start-line="83" selection-start-column="33" selection-end-line="83" selection-end-column="33" />
               <folding>
-                <element signature="method#setforward#0;class#Objectback#0" />
                 <element signature="method#standbyrotatereverse#0;class#Objectback#0" />
               </folding>
             </state>
@@ -142,13 +129,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Objectright.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
+            <state relative-caret-position="266">
+              <caret line="118" column="33" selection-start-line="118" selection-start-column="33" selection-end-line="118" selection-end-column="33" />
               <folding>
-                <element signature="method#setforward#0;class#Objectright#0" />
                 <element signature="method#createObject#0;class#Objectright#0" />
                 <element signature="method#createLight#0;class#Objectright#0" />
                 <element signature="method#turnright#0;class#Objectright#0" />
@@ -227,10 +213,10 @@
         <option value="$PROJECT_DIR$/src/Controller.java" />
         <option value="$PROJECT_DIR$/src/Controller.fxml" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/Object.java" />
-        <option value="$PROJECT_DIR$/src/Objectleft.java" />
-        <option value="$PROJECT_DIR$/src/Objectback.java" />
         <option value="$PROJECT_DIR$/src/Objectright.java" />
+        <option value="$PROJECT_DIR$/src/Objectback.java" />
+        <option value="$PROJECT_DIR$/src/Objectleft.java" />
+        <option value="$PROJECT_DIR$/src/Object.java" />
       </list>
     </option>
   </component>
@@ -332,7 +318,17 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Programmierung\PSeminarProjekt\src" />
+      <recent name="C:\Users\Tobip\Desktop\Programmierung\PSeminarProjekt\model" />
+      <recent name="C:\Users\Tobip\Desktop\PSeminarProjekt\model\old_school" />
+      <recent name="C:\Users\Tobip\Desktop\PSeminar_FX\model" />
+      <recent name="C:\Users\Tobip\Desktop\PSeminar_FX" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -341,15 +337,6 @@
       <recent name="C:\Users\Tobip\Desktop\Programmierung\PSeminarProjekt\model\otto_hahn" />
       <recent name="C:\Users\Tobip\Desktop\Programmierung\PSeminarProjekt\res" />
       <recent name="C:\Users\Tobip\Desktop\PSeminar_FX\src" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Tobip\Desktop\Programmierung\PSeminarProjekt\model" />
-      <recent name="C:\Users\Tobip\Desktop\PSeminarProjekt\model\old_school" />
-      <recent name="C:\Users\Tobip\Desktop\PSeminar_FX\model" />
-      <recent name="C:\Users\Tobip\Desktop\PSeminar_FX" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -492,7 +479,14 @@
       <option name="project" value="LOCAL" />
       <updated>1547726815717</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Scale erhöht;">
+      <created>1547727488568</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1547727488568</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -586,7 +580,8 @@
     <MESSAGE value="Fenster standardmäßig schwarz" />
     <MESSAGE value="Arrow icons eingefügt;&#10;front reload bug gefixt;" />
     <MESSAGE value="Hintergrund auf weiß" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hintergrund auf weiß" />
+    <MESSAGE value="Scale erhöht;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Scale erhöht;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -716,13 +711,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Objectright.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="118" column="33" selection-start-line="118" selection-start-column="33" selection-end-line="118" selection-end-column="33" />
+          <folding>
+            <element signature="method#createObject#0;class#Objectright#0" />
+            <element signature="method#createLight#0;class#Objectright#0" />
+            <element signature="method#turnright#0;class#Objectright#0" />
+            <element signature="method#turnleft#0;class#Objectright#0" />
+            <element signature="method#runturnright#0;class#Objectright#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Object.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="63" column="4" selection-start-line="63" selection-start-column="4" selection-end-line="76" selection-end-column="5" />
+        <state relative-caret-position="408">
+          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
           <folding>
             <element signature="e#386#418#0" expanded="true" />
-            <element signature="method#setforward#0;class#Object#0" />
             <element signature="method#createObject#0;class#Object#0" />
             <element signature="method#createLight#0;class#Object#0" />
             <element signature="method#turnright#0;class#Object#0" />
@@ -735,10 +743,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Objectleft.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
+        <state relative-caret-position="240">
+          <caret line="93" column="33" selection-start-line="93" selection-start-column="33" selection-end-line="93" selection-end-column="33" />
           <folding>
-            <element signature="method#setforward#0;class#Objectleft#0" />
             <element signature="method#createObject#0;class#Objectleft#0" />
             <element signature="method#createLight#0;class#Objectleft#0" />
             <element signature="method#turnright#0;class#Objectleft#0" />
@@ -750,26 +757,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Objectback.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
+        <state relative-caret-position="390">
+          <caret line="83" column="33" selection-start-line="83" selection-start-column="33" selection-end-line="83" selection-end-column="33" />
           <folding>
-            <element signature="method#setforward#0;class#Objectback#0" />
             <element signature="method#standbyrotatereverse#0;class#Objectback#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Objectright.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
-          <folding>
-            <element signature="method#setforward#0;class#Objectright#0" />
-            <element signature="method#createObject#0;class#Objectright#0" />
-            <element signature="method#createLight#0;class#Objectright#0" />
-            <element signature="method#turnright#0;class#Objectright#0" />
-            <element signature="method#turnleft#0;class#Objectright#0" />
-            <element signature="method#runturnright#0;class#Objectright#0" />
           </folding>
         </state>
       </provider>
