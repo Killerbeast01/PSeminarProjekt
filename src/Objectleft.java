@@ -56,6 +56,7 @@ public class Objectleft extends JApplet {
         frame.setVisible(true);
         frame.setTitle("links");
         Main.lg.info("Fenster erzeugt;");
+        setforward();
         runturnleft();
         Main.Fenster += 1;
 
@@ -83,6 +84,21 @@ public class Objectleft extends JApplet {
         universe[i].addBranchGraph(scene[i]);
 
 
+
+    }
+
+    private static void setforward(){
+
+        for (int i = 0; i < applets.length; i++) {
+
+            t3dstep[i].setScale(5);
+            tg[i].getTransform(t3d[i]);
+            t3d[i].get(matrix[i]);
+            t3d[i].setTranslation(new Vector3d(0.0, 0.0, 0.0));
+            t3d[i].mul(t3dstep[i]);
+            t3d[i].setTranslation(new Vector3d(matrix[i].m03, matrix[i].m13, matrix[i].m23));
+            tg[i].setTransform(t3d[i]);
+        }
 
     }
 

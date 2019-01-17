@@ -8,9 +8,9 @@
       <excludeFolder url="file://$MODULE_DIR$/_model" />
       <excludeFolder url="file://$MODULE_DIR$/model" />
     </content>
-    <content url="file://$MODULE_DIR$/model/aktuelles Schulgebäude" />
+    <content url="file://$MODULE_DIR$/src/Otto_Hahn" />
+    <content url="file://$MODULE_DIR$/src/aktuelles Schulgebäude" />
     <content url="file://$MODULE_DIR$/model/altes Schulgebäude" />
-    <content url="file://$MODULE_DIR$/model/otto_hahn" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="javax" level="project" />
