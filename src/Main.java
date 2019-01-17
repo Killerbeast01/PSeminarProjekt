@@ -122,8 +122,7 @@ public class Main extends Application {
         primaryStage.setAlwaysOnTop(true);
         primaryStage.setOnCloseRequest(event -> System.exit(0));
         controller.cbModelChecker.focusTraversableProperty();
-        primaryStage.setY(-180);
-        primaryStage.setX(-1020);
+
 
         resizecomponents(primaryStage);
 
@@ -143,12 +142,9 @@ public class Main extends Application {
         controller.btn_rotate_right.setDisable(false);
         controller.btn_rotate_left.setDisable(false);
         controller.btn_rotate_reset.setDisable(false);
-        primaryStage.setY(-180);
-        primaryStage.setX(-1020);
+
         Thread.sleep(1000);
         primaryStage.setFullScreen(true);
-        primaryStage.setY(-180);
-        primaryStage.setX(-1020);
 
         turnThread.start();
     }

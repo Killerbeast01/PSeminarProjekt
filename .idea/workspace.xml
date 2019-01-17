@@ -8,11 +8,13 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Scale erhöht;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Log.log" beforeDir="false" afterPath="$PROJECT_DIR$/Log.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/PSeminar_FX_jar/PSeminar_FX_jar.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/PSeminar_FX_jar/PSeminar_FX_jar.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PSeminar_FX/Object.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PSeminar_FX/Object.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PSeminar_FX/Objectback.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PSeminar_FX/Objectback.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PSeminar_FX/Objectleft.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PSeminar_FX/Objectleft.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PSeminar_FX/Objectright.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PSeminar_FX/Objectright.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Object.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Object.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Objectback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Objectback.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Objectleft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Objectleft.java" afterDir="false" />
@@ -68,6 +70,38 @@
     <ui_properties converted="true" />
     <breakpoint_rules converted="true" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1921313639">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.23" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="79" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="79" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="JavaFxApplication" />
   </component>
@@ -76,10 +110,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Object.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+            <state relative-caret-position="952">
+              <caret line="66" column="29" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
               <folding>
-                <element signature="e#386#418#0" expanded="true" />
                 <element signature="method#createObject#0;class#Object#0" />
                 <element signature="method#createLight#0;class#Object#0" />
                 <element signature="method#turnright#0;class#Object#0" />
@@ -94,8 +127,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Objectleft.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="93" column="33" selection-start-line="93" selection-start-column="33" selection-end-line="93" selection-end-column="33" />
+            <state relative-caret-position="1360">
+              <caret line="90" column="29" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
               <folding>
                 <element signature="method#createObject#0;class#Objectleft#0" />
                 <element signature="method#createLight#0;class#Objectleft#0" />
@@ -107,11 +140,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Objectback.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="83" column="33" selection-start-line="83" selection-start-column="33" selection-end-line="83" selection-end-column="33" />
+            <state relative-caret-position="1190">
+              <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
               <folding>
                 <element signature="method#standbyrotatereverse#0;class#Objectback#0" />
               </folding>
@@ -121,25 +154,46 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="476">
               <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
             </state>
           </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Objectright.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="118" column="33" selection-start-line="118" selection-start-column="33" selection-end-line="118" selection-end-column="33" />
+            <state relative-caret-position="164">
+              <caret line="120" column="38" selection-start-line="120" selection-start-column="38" selection-end-line="120" selection-end-column="38" />
               <folding>
                 <element signature="method#createObject#0;class#Objectright#0" />
                 <element signature="method#createLight#0;class#Objectright#0" />
                 <element signature="method#turnright#0;class#Objectright#0" />
                 <element signature="method#turnleft#0;class#Objectright#0" />
                 <element signature="method#runturnright#0;class#Objectright#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="284">
+              <caret line="147" lean-forward="true" selection-start-line="147" selection-end-line="147" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#main#0;class#Main#0" />
+                <element signature="method#startup#0;class#Main#0" />
+                <element signature="method#ordnereinlesen#0;class#Main#0" />
+                <element signature="method#modelchange#0;class#Main#0" />
+                <element signature="method#rotateleft#0;class#Main#0" />
+                <element signature="method#rotateright#0;class#Main#0" />
+                <element signature="method#rotatereset#0;class#Main#0" />
+                <element signature="method#rotate#0;class#Main#0" />
+                <element signature="method#resizecomponents#0;class#Main#0" />
               </folding>
             </state>
           </provider>
@@ -212,20 +266,20 @@
         <option value="$PROJECT_DIR$/src/window.java" />
         <option value="$PROJECT_DIR$/src/Controller.java" />
         <option value="$PROJECT_DIR$/src/Controller.fxml" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/Objectright.java" />
-        <option value="$PROJECT_DIR$/src/Objectback.java" />
-        <option value="$PROJECT_DIR$/src/Objectleft.java" />
         <option value="$PROJECT_DIR$/src/Object.java" />
+        <option value="$PROJECT_DIR$/src/Objectleft.java" />
+        <option value="$PROJECT_DIR$/src/Objectback.java" />
+        <option value="$PROJECT_DIR$/src/Objectright.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="1010" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-1032" />
+    <option name="y" value="-197" />
+    <option name="width" value="526" />
+    <option name="height" value="577" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -238,33 +292,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="PSeminarProjekt" type="58d84e3e:PackageViewProjectNode" />
-              <item name="PSeminar_FX" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="PSeminarProjekt" type="58d84e3e:PackageViewProjectNode" />
-              <item name="PSeminar_FX" type="616d4139:PackageViewModuleNode" />
-              <item name="model" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="PSeminarProjekt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PSeminarProjekt" type="462c0819:PsiDirectoryNode" />
+              <item name="Hologramm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hologramm" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="PSeminarProjekt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PSeminarProjekt" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="Hologramm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hologramm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -287,6 +325,22 @@
               <item name="PSeminarProjekt" type="cbb8eebc:String" user="PSeminarProjekt" />
               <item name="src" type="cbb8eebc:String" user="src" />
               <item name="model" type="cbb8eebc:String" user="model" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="PSeminarProjekt" type="58d84e3e:PackageViewProjectNode" />
+              <item name="PSeminar_FX" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="PSeminarProjekt" type="58d84e3e:PackageViewProjectNode" />
+              <item name="PSeminar_FX" type="616d4139:PackageViewModuleNode" />
+              <item name="model" type="1f31426a:PackageElementNode" />
             </path>
           </expand>
           <select />
@@ -364,7 +418,7 @@
       <Host>localhost</Host>
       <Port>5050</Port>
     </configuration>
-    <configuration default="true" type="Applet">
+    <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -425,7 +479,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="TestNG">
+    <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="moduleWithDependencies" />
@@ -436,11 +490,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
       <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file enabled="true" id="idea.log" />
+      <predefined_log_file id="idea.log" enabled="true" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -502,10 +556,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="34" width="1381" height="885" extended-state="6" />
+    <frame x="-1032" y="-197" width="1040" height="586" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.22600152" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.2897959" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -514,7 +568,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32847682" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24900663" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24778761" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -574,6 +628,9 @@
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info anchor="right" id="Maven" order="10" />
     </layout-to-restore>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
@@ -671,6 +728,53 @@
     <entry file="file://$PROJECT_DIR$/.idea/dictionaries/Tobip.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="66" column="29" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
+          <folding>
+            <element signature="method#createObject#0;class#Object#0" />
+            <element signature="method#createLight#0;class#Object#0" />
+            <element signature="method#turnright#0;class#Object#0" />
+            <element signature="method#standbyrotate#0;class#Object#0" />
+            <element signature="method#standbyrotatereverse#0;class#Object#0" />
+            <element signature="method#runturnleft#0;class#Object#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Objectleft.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1360">
+          <caret line="90" column="29" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
+          <folding>
+            <element signature="method#createObject#0;class#Objectleft#0" />
+            <element signature="method#createLight#0;class#Objectleft#0" />
+            <element signature="method#turnright#0;class#Objectleft#0" />
+            <element signature="method#turnleft#0;class#Objectleft#0" />
+            <element signature="method#runturnleft#0;class#Objectleft#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Objectback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1190">
+          <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
+          <folding>
+            <element signature="method#standbyrotatereverse#0;class#Objectback#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -684,18 +788,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller.fxml">
+    <entry file="file://$PROJECT_DIR$/src/Objectright.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+        <state relative-caret-position="164">
+          <caret line="120" column="38" selection-start-line="120" selection-start-column="38" selection-end-line="120" selection-end-column="38" />
+          <folding>
+            <element signature="method#createObject#0;class#Objectright#0" />
+            <element signature="method#createLight#0;class#Objectright#0" />
+            <element signature="method#turnright#0;class#Objectright#0" />
+            <element signature="method#turnleft#0;class#Objectright#0" />
+            <element signature="method#runturnright#0;class#Objectright#0" />
+          </folding>
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="151" lean-forward="true" selection-start-line="151" selection-end-line="151" />
+        <state relative-caret-position="284">
+          <caret line="147" lean-forward="true" selection-start-line="147" selection-end-line="147" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#main#0;class#Main#0" />
@@ -707,60 +817,6 @@
             <element signature="method#rotatereset#0;class#Main#0" />
             <element signature="method#rotate#0;class#Main#0" />
             <element signature="method#resizecomponents#0;class#Main#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Objectright.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="118" column="33" selection-start-line="118" selection-start-column="33" selection-end-line="118" selection-end-column="33" />
-          <folding>
-            <element signature="method#createObject#0;class#Objectright#0" />
-            <element signature="method#createLight#0;class#Objectright#0" />
-            <element signature="method#turnright#0;class#Objectright#0" />
-            <element signature="method#turnleft#0;class#Objectright#0" />
-            <element signature="method#runturnright#0;class#Objectright#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
-          <folding>
-            <element signature="e#386#418#0" expanded="true" />
-            <element signature="method#createObject#0;class#Object#0" />
-            <element signature="method#createLight#0;class#Object#0" />
-            <element signature="method#turnright#0;class#Object#0" />
-            <element signature="method#standbyrotate#0;class#Object#0" />
-            <element signature="method#standbyrotatereverse#0;class#Object#0" />
-            <element signature="method#runturnleft#0;class#Object#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Objectleft.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="93" column="33" selection-start-line="93" selection-start-column="33" selection-end-line="93" selection-end-column="33" />
-          <folding>
-            <element signature="method#createObject#0;class#Objectleft#0" />
-            <element signature="method#createLight#0;class#Objectleft#0" />
-            <element signature="method#turnright#0;class#Objectleft#0" />
-            <element signature="method#turnleft#0;class#Objectleft#0" />
-            <element signature="method#runturnleft#0;class#Objectleft#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Objectback.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="83" column="33" selection-start-line="83" selection-start-column="33" selection-end-line="83" selection-end-column="33" />
-          <folding>
-            <element signature="method#standbyrotatereverse#0;class#Objectback#0" />
           </folding>
         </state>
       </provider>
