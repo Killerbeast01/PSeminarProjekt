@@ -103,7 +103,7 @@ public class Object extends JApplet {
         objRoot.addChild(createObject(i, objectpath));
 
         Background background = new Background();
-        background.setColor(0.5f, 0.5f, 0.5f);
+        background.setColor(1f, 1f, 1f);
         background.setApplicationBounds(bounds);
         objRoot.addChild(background);
 
