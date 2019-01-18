@@ -16,6 +16,8 @@ import java.util.logging.SimpleFormatter;
 
 public class Main extends Application {
 
+
+    private static double[][] screenbounds = new double[5][2];
     private static int Rotation = 0;
     private static int StandbyRotation = 0;
     private static Controller controller;
@@ -129,8 +131,7 @@ public class Main extends Application {
         primaryStage.show();
         primaryStage.widthProperty().addListener((obs, oldVal, newVal) -> resizecomponents(primaryStage));
         primaryStage.heightProperty().addListener((obs, oldVal, newVal) -> resizecomponents(primaryStage));
-        primaryStage.xProperty().addListener((obs, oldvar, newvar) -> printloc(primaryStage));
-        primaryStage.yProperty().addListener((obs, oldvar, newvar) -> printloc(primaryStage));
+
         lg.info("Controller erzeugt;");
         turnThread turnThread = new turnThread();
         System.out.println("auf Fenster warten...");
@@ -143,10 +144,33 @@ public class Main extends Application {
         controller.btn_rotate_left.setDisable(false);
         controller.btn_rotate_reset.setDisable(false);
 
+
+        primaryStage.setX(0);
+        primaryStage.setY(0);
         Thread.sleep(1000);
         primaryStage.setFullScreen(true);
-
+        primaryStage.setX(0);
+        primaryStage.setY(0);
         turnThread.start();
+        showOnScreen(1, Object.frame);
+        Object.frame.setLocation(1280,50);
+        Objectright.frame.setLocation(2560, 50);
+        Objectback.frame.setLocation(3840,50);
+        Objectleft.frame.setLocation(5120,50);
+
+        Thread.sleep(1000);
+        Objectback.frame.setExtendedState(Frame.MAXIMIZED_BOTH);
+        Objectleft.frame.setExtendedState(Frame.MAXIMIZED_BOTH);
+        Objectright.frame.setExtendedState(Frame.MAXIMIZED_BOTH);
+        Object.frame.setExtendedState(Frame.MAXIMIZED_BOTH);
+
+
+        Object.frame.setVisible(true);
+        Objectright.frame.setVisible(true);
+        Objectleft.frame.setVisible(true);
+        Objectback.frame.setVisible(true);
+
+
     }
 
     void printloc(Stage primaryStage) {
@@ -315,20 +339,26 @@ public class Main extends Application {
 
 
     public static void showOnScreen(int screen, Frame frame) {
-        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-        GraphicsDevice[] gd = ge.getScreenDevices();
-        int width = 0, height = 0;
-        if( screen > -1 && screen < gd.length ) {
-            width = gd[screen].getDefaultConfiguration().getBounds().width;
-            height = gd[screen].getDefaultConfiguration().getBounds().height;
-            frame.setLocation(
-                    ((width / 2) - (frame.getSize().width / 2)) + gd[screen].getDefaultConfiguration().getBounds().x,
-                    ((height / 2) - (frame.getSize().height / 2)) + gd[screen].getDefaultConfiguration().getBounds().y
-            );
-            frame.setVisible(true);
-        } else {
-            throw new RuntimeException( "No Screens Found" );
+
+        GraphicsDevice[] gds = GraphicsEnvironment.getLocalGraphicsEnvironment().getScreenDevices();
+
+        for (GraphicsDevice gd : gds) {
+            //0 = x, 1 = y
+            for (GraphicsConfiguration gc : gd.getConfigurations()) {
+                Rectangle Bounds = gc.getBounds();
+                if (screenbounds[0][0] == 0){ screenbounds[0][0] = Bounds.getX(); screenbounds[0][1] = Bounds.getY();}
+                else if (screenbounds[1][0] == 0){ screenbounds[1][0] = Bounds.getX(); screenbounds[1][1] = Bounds.getY();}
+                else if (screenbounds[2][0] == 0){ screenbounds[2][0] = Bounds.getX(); screenbounds[2][1] = Bounds.getY();}
+                else if (screenbounds[3][0] == 0){ screenbounds[3][0] = Bounds.getX(); screenbounds[3][1] = Bounds.getY();}
+                else if (screenbounds[4][0] == 0){ screenbounds[4][0] = Bounds.getX(); screenbounds[4][1] = Bounds.getY();}
+
+                }
+
         }
+
+        System.out.println(screenbounds[2][0] + " + " + screenbounds[2][1] );
+
+
     }
 }
 

@@ -48,11 +48,10 @@ public class Object extends JApplet {
         }
 
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        frame = new MainFrame(applets[0], screenSize.width / 2, screenSize.height / 2);
+        frame = new MainFrame(applets[0], 200,200);
         frame.setLocation(0,0);
         frame.setBackground(Color.GRAY);
         frame.setExtendedState(Frame.MAXIMIZED_BOTH);
-        frame.setVisible(true);
         frame.setTitle("front");
         Main.lg.info("Fenster erzeugt;");
         setforward();

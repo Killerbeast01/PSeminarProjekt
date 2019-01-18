@@ -48,12 +48,10 @@ public class Objectleft extends JApplet {
         }
 
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        frame = new MainFrame(applets[0], screenSize.width / 2, screenSize.height / 2);
-
+        frame = new MainFrame(applets[0], 200,200);
 
         frame.setBackground(Color.GRAY);
         //frame.setExtendedState(Frame.MAXIMIZED_BOTH);
-        frame.setVisible(true);
         frame.setTitle("links");
         Main.lg.info("Fenster erzeugt;");
         setforward();

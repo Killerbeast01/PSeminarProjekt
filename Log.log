@@ -1,34 +1,34 @@
-Jan. 17, 2019 1:39:07 NACHM. Main startup
+Jan. 18, 2019 9:40:35 VORM. Main startup
 INFORMATION: Start;
-Jan. 17, 2019 1:39:07 NACHM. window <init>
+Jan. 18, 2019 9:40:35 VORM. window <init>
 INFORMATION: Starte Threads für Fenster;
-Jan. 17, 2019 1:39:07 NACHM. window <init>
+Jan. 18, 2019 9:40:35 VORM. window <init>
 INFORMATION: Threads für Fenster gestartet;
-Jan. 17, 2019 1:39:07 NACHM. Main start
+Jan. 18, 2019 9:40:35 VORM. Main start
 INFORMATION: Erzeuge Controller;
-Jan. 17, 2019 1:39:07 NACHM. Objectback loadObject
+Jan. 18, 2019 9:40:35 VORM. Objectleft loadObject
 INFORMATION: Erzeuge Fenster;
-Jan. 17, 2019 1:39:07 NACHM. Objectback loadObject
+Jan. 18, 2019 9:40:35 VORM. Objectleft loadObject
 INFORMATION: Erzeuge applet_old;
-Jan. 17, 2019 1:39:07 NACHM. Object loadObject
+Jan. 18, 2019 9:40:35 VORM. Object loadObject
 INFORMATION: Erzeuge Fenster;
-Jan. 17, 2019 1:39:07 NACHM. Object loadObject
+Jan. 18, 2019 9:40:35 VORM. Object loadObject
 INFORMATION: Erzeuge applet_old;
-Jan. 17, 2019 1:39:07 NACHM. Objectleft loadObject
+Jan. 18, 2019 9:40:35 VORM. Objectback loadObject
 INFORMATION: Erzeuge Fenster;
-Jan. 17, 2019 1:39:07 NACHM. Objectleft loadObject
+Jan. 18, 2019 9:40:35 VORM. Objectback loadObject
 INFORMATION: Erzeuge applet_old;
-Jan. 17, 2019 1:39:07 NACHM. Objectright loadObject
+Jan. 18, 2019 9:40:35 VORM. Objectright loadObject
 INFORMATION: Erzeuge Fenster;
-Jan. 17, 2019 1:39:07 NACHM. Objectright loadObject
+Jan. 18, 2019 9:40:35 VORM. Objectright loadObject
 INFORMATION: Erzeuge applet_old;
-Jan. 17, 2019 1:39:08 NACHM. Main start
+Jan. 18, 2019 9:40:37 VORM. Main start
 INFORMATION: Controller erzeugt;
-Jan. 17, 2019 1:39:09 NACHM. Objectright loadObject
+Jan. 18, 2019 9:40:40 VORM. Objectleft loadObject
 INFORMATION: Fenster erzeugt;
-Jan. 17, 2019 1:39:09 NACHM. Objectleft loadObject
+Jan. 18, 2019 9:40:40 VORM. Objectback loadObject
 INFORMATION: Fenster erzeugt;
-Jan. 17, 2019 1:39:09 NACHM. Object loadObject
+Jan. 18, 2019 9:40:40 VORM. Objectright loadObject
 INFORMATION: Fenster erzeugt;
-Jan. 17, 2019 1:39:09 NACHM. Objectback loadObject
+Jan. 18, 2019 9:40:40 VORM. Object loadObject
 INFORMATION: Fenster erzeugt;
